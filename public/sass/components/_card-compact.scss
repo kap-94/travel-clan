@@ -1,0 +1,54 @@
+.card-compact {
+  cursor: pointer;
+  height: 37.5rem;
+
+  &__header {
+    height: 75%;
+    overflow: hidden;
+  }
+
+  &__image {
+    height: 100%;
+    width: 100%;
+
+    transition: transform 0.3s cubic-bezier(0.25, 0.45, 0.45, 0.95);
+
+    &:hover {
+      transform: scale(1.1);
+    }
+  }
+
+  &__body {
+    color: var(--color-black);
+    height: 25%;
+  }
+
+  &__title {
+    color: var(--color-grey-dark);
+    font-size: 1.45rem;
+    font-weight: 700;
+    margin-top: 1.6rem;
+    margin-left: 1.2rem;
+    margin-bottom: 0.8rem;
+    line-height: 1.33333rem;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    position: relative;
+
+    &::before {
+      border-left: 4px solid #008577;
+      content: "";
+      display: inline-block;
+      position: absolute;
+      left: 0;
+      margin-left: -1.2rem;
+      height: 90%;
+    }
+  }
+
+  &__text {
+    font-size: 2.15rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+  }
+}

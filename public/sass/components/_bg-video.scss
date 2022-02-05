@@ -1,0 +1,24 @@
+.bg-video {
+  overflow: hidden;
+  position: relative;
+  height: 95vh;
+  width: 100%;
+
+  &__content {
+    opacity: 0.25;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+  }
+
+  &__text-box {
+    position: absolute;
+    left: 10vw;
+    bottom: 10vw;
+    z-index: 1;
+
+    a {
+      text-decoration: none;
+    }
+  }
+}

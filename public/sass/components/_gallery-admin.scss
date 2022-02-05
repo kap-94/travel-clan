@@ -1,0 +1,12 @@
+.gallery-admin {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+  grid-column-gap: 2.5rem;
+  grid-row-gap: 5rem;
+  padding: 0 0 8rem 0;
+
+  &__item {
+    height: 50rem;
+    width: 100%;
+  }
+}

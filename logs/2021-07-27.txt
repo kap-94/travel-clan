@@ -1,0 +1,13 @@
+[27-Jul-2021 03:08:35 Europe/Berlin] Uncaught exception: 'ErrorException' with message 'Undefined index: title'
+Stack trace: #0 /home/Kap94/dw/PHP/fca-admin/App/Models/Article.php(173): Core\Error::errorHandler(8, 'Undefined index...', '/home/Kap94/dw/...', 173, Array)
+#1 /home/Kap94/dw/PHP/fca-admin/App/Controllers/Articles.php(77): App\Models\Article->update(Array)
+#2 [internal function]: App\Controllers\Articles->updateAction()
+#3 /home/Kap94/dw/PHP/fca-admin/Core/Controller.php(51): call_user_func_array(Array, Array)
+#4 /home/Kap94/dw/PHP/fca-admin/Core/Router.php(121): Core\Controller->__call('update', Array)
+#5 /home/Kap94/dw/PHP/fca-admin/public/index.php(47): Core\Router->dispatch('article/3/updat...')
+#6 {main}
+Thrown in '/home/Kap94/dw/PHP/fca-admin/App/Models/Article.php' on line 173
+[27-Jul-2021 03:08:35 Europe/Berlin] Uncaught exception: 'Exception' with message 'No route matched.'
+Stack trace: #0 /home/Kap94/dw/PHP/fca-admin/public/index.php(47): Core\Router->dispatch('favicon.ico')
+#1 {main}
+Thrown in '/home/Kap94/dw/PHP/fca-admin/Core/Router.php' on line 130

@@ -1,0 +1,23 @@
+.paginator {
+  color: var(--color-white);
+  font-weight: 500;
+
+  &__nav {
+    display: flex;
+  }
+
+  &__item {
+    list-style: none;
+    padding: 2rem;
+    font-size: 1.65rem;
+
+    a {
+      font-weight: 700;
+      text-decoration: none;
+
+      &:visited {
+        color: var(--color-primary);
+      }
+    }
+  }
+}

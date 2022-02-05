@@ -1,0 +1,14 @@
+<nav class="paginator">
+  <ul class="paginator__nav">
+    <li class="paginator__item">
+      {% if paginator.previous %}
+      <a href="{{ base }}?page={{ paginator.previous }}">Previous</a>
+      {% else %} Previous {% endif %}
+    </li>
+    <li class="paginator__item">
+      {% if paginator.next %}
+      <a href="{{ base }}?page={{ paginator.next }}">Next</a>
+      {% else %} Next {% endif %}
+    </li>
+  </ul>
+</nav>

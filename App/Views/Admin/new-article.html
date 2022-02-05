@@ -1,0 +1,20 @@
+{% extends 'base-admin.html' %} {% block title %} New Article {% endblock %} {%
+block body %}
+
+<div class="page-admin page-admin--article">
+  <form class="form mb-3" method="post" action="/articles/create">
+    {% if article.errors is not empty %}
+    <p>Errors:</p>
+    <ul>
+      {% for error in article.errors %}
+      <li>{{ error }}</li>
+      {% endfor %}
+    </ul>
+    {% endif %}
+
+    <h2 class="heading-secondary mb-3">New Article</h2>
+
+    {{ include('Admin/includes/article-form-content.html') }}
+  </form>
+</div>
+{% endblock %}

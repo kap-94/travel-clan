@@ -1,0 +1,68 @@
+{% extends 'base-admin.html' %} {% block title %} Profile {% endblock %} {%
+block body %}
+
+<div class="page-admin page-admin--centered">
+  {% if user.errors is not empty %}
+  <p>Errors:</p>
+  <ul>
+    {% for error in user.errors %}
+    <li>{{ error }}</li>
+    {% endfor %}
+  </ul>
+  {% endif %}
+
+  <form class="form" id="formProfile" action="/profile/update" method="post">
+    <input type="hidden" id="profileId" value="{{ user.id }}" />
+
+    <h2 class="heading-secondary">Edit</h2>
+
+    <div class="form__control">
+      <label class="form__label" for="inputName">Name</label>
+      <input
+        type="text"
+        name="name"
+        class="form__input"
+        placeholder="Name"
+        id="inputName"
+        value="{{ user.name }}"
+        required
+      />
+    </div>
+
+    <div class="form__control">
+      <label class="form__label" for="inputEmail">Email</label>
+      <input
+        type="email"
+        name="email"
+        class="form__input"
+        placeholder="Email"
+        id="inputEmail"
+        value="{{ user.email }}"
+        required
+      />
+    </div>
+
+    <div class="form__control">
+      <label class="form__label" for="inputPassword">Password</label>
+      <input
+        type="password"
+        name="password"
+        class="form__input"
+        placeholder="Password"
+        id="inputPassword"
+        aria-describedby="helpBlock"
+      />
+      <br />
+      <span id="helpBlock">Leave blank to keep current password</span>
+    </div>
+
+    <button type="submit" class="button button--primary button--large mb-3">
+      Save
+    </button>
+
+    <div class="text-center">
+      <a href="/profile/show">Cancel</a>
+    </div>
+  </form>
+</div>
+{% endblock %}

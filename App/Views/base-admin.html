@@ -1,0 +1,113 @@
+{% extends 'base.html' %} {% block title %} Admin {% endblock %} {% block css %}
+<link rel="stylesheet" href="/css/jquery.datetimepicker.min.css" />
+{% endblock %} {% block js %}
+<script
+  src="https://cdn.tiny.cloud/1/no-api-key/tinymce/5/tinymce.min.js"
+  referrerpolicy="origin"
+></script>
+<script defer src="/js/plugins/jquery.datetimepicker.full.min.js"></script>
+<script type="module" defer src="/js/scriptAdmin.js"></script>
+
+{% endblock %} {% block page %}
+
+<div class="admin-layout">
+  {% block navigation %}
+
+  <header class="navbar-admin">
+    <a href="/" class="navbar-admin__brand"><h2>TravelClan</h2></a>
+
+    <form action="#" class="search">
+      <input
+        type="text"
+        class="search__input"
+        placeholder="Search articles"
+        disabled
+      />
+      <button class="search__button">
+        <svg class="search__icon">
+          <use
+            xlink:href="{{ base_path }}/assets/icons/sprite.svg#icon-magnifying-glass"
+          ></use>
+        </svg>
+      </button>
+    </form>
+
+    <nav class="user-nav">
+      <ul class="user-nav__list">
+        <li class="user-nav__user">
+          <span class="user-nav__user-name">{{ current_user.name }}</span>
+          <img
+            src="{{ base_path }}/assets/images/user.png"
+            alt="User photo"
+            class="user-nav__user-photo"
+          />
+        </li>
+      </ul>
+
+      <div class="dropdown">
+        <div class="dropdown__scrim"></div>
+        <span class="dropdown__square"></span>
+
+        <ul class="dropdown__list">
+          <li class="dropdown__item">
+            <a href="/profile/show" class="dropdown__link">Profile</a>
+          </li>
+          <hr />
+          <li class="dropdown__item">
+            <a href="/logout" class="dropdown__link">Logout</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+
+  <div class="sidebar-close">
+    <div class="button-hamburger__wrapper">
+      <button class="button-hamburger"></button>
+    </div>
+  </div>
+
+  <div class="sidebar">
+    <div class="sidebar__scrim"></div>
+
+    <div class="sidebar__content">
+      <div class="sidebar__header">
+        <div class="button-hamburger__wrapper">
+          <button class="button-hamburger"></button>
+        </div>
+
+        <h2 class="sidebar__title">TravelClan</h2>
+      </div>
+
+      <nav class="sidebar__nav">
+        <ul>
+          <li class="sidebar__item">
+            <a href="/" class="sidebar__link">
+              <i class="fa fa-arrow-left" aria-hidden="true"></i>
+              <span class="sidebar__text">Home</span>
+            </a>
+          </li>
+
+          <li class="sidebar__item">
+            <a href="/admin" class="sidebar__link">
+              <i class="fa fa-archive" aria-hidden="true"></i>
+              <span class="sidebar__text">Articles</span>
+            </a>
+          </li>
+
+          <li class="sidebar__item">
+            <a href="/articles/new" class="sidebar__link">
+              <i class="fa fa-address-card" aria-hidden="true"></i>
+              <span class="sidebar__text">New Article</span>
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </div>
+  {% endblock %} {% block body %} {% endblock %}
+
+  <div class="footer-admin"></div>
+</div>
+
+{% endblock %}

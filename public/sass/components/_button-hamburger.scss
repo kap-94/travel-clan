@@ -1,0 +1,37 @@
+.button-hamburger__wrapper {
+  cursor: pointer;
+  padding: 2rem 1rem 2rem 0;
+}
+
+.button-hamburger {
+  border: none;
+  border-radius: 0;
+  background-color: var(--color-white);
+  cursor: pointer;
+  height: 2px;
+  width: 2.25rem;
+
+  &::before,
+  &::after {
+    background-color: var(--color-white);
+    height: 2px;
+    width: 3rem;
+    content: "";
+    display: block;
+  }
+
+  &::before {
+    transform: translateY(-1.3rem);
+  }
+  &::after {
+    transform: translateY(1.1rem);
+  }
+
+  // @media only screen and (max-width: $bp-large) {
+  //     margin-top: 0;
+  //     margin-right: 3rem;
+
+  //     &::before { transform: translateY(-1.2rem); }
+  //     &::after { transform: translateY(1rem); }
+  // }
+}

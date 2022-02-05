@@ -1,0 +1,38 @@
+{% extends 'base.html' %} {% block title %} Forgot Password {% endblock %} {%
+block body %}
+
+<div class="page-centered">
+  <form
+    class="form bg-grey-light p-5"
+    id="formPasswordPassword"
+    method="post"
+    action="/password/request-reset"
+  >
+    <h1 class="form__title text-center mb-2">Reset password</h1>
+
+    <div class="form__control">
+      <label for="inputEmail">Email</label>
+      <input
+        class="form__input"
+        type="email"
+        name="email"
+        id="inputEmail"
+        value="{{email}}"
+        autofocus
+        required
+      />
+    </div>
+
+    <button
+      type="submit"
+      class="button button--primary button--large fs-15 my-3"
+    >
+      Send password reset
+    </button>
+
+    <div class="text-center">
+      <a href="/login">Cancel</a>
+    </div>
+  </form>
+</div>
+{% endblock %}

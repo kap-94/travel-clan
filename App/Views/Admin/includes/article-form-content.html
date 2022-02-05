@@ -1,0 +1,141 @@
+<!-- <form class="form mb-3" method="post" action="{{ form_action }}">
+  {% if article.errors is not empty %}
+  <p>Errors:</p>
+  <ul>
+    {% for error in article.errors %}
+    <li>{{ error }}</li>
+    {% endfor %}
+  </ul>
+  {% endif %}
+
+  <h2 class="heading-secondary mb-3">{{ form_title }}</h2> -->
+
+<div class="form__generals mb-5">
+  <div>
+    <div class="form__control">
+      <label for="title" class="form__label">Title</label>
+      <input
+        type="text"
+        name="title"
+        class="form__input"
+        placeholder="Title"
+        value="{{article.title}}"
+        id="title"
+        required
+      />
+    </div>
+
+    <div class="form__control">
+      <label class="form__label" for="author">Author</label>
+      <input
+        type="text"
+        name="author"
+        class="form__input"
+        placeholder="Author"
+        id="author"
+        value="{{ article.author }}"
+      />
+    </div>
+
+    <div class="form__control">
+      <label class="form__label" for="published_at"
+        >Publication date and time</label
+      >
+      <input
+        name="published_at"
+        class="form__input"
+        id="published_at"
+        value="{{ article.published_at }}"
+      />
+    </div>
+
+    <div class="form__control">
+      <label class="form__label" for="location">Location</label>
+      <input
+        type="text"
+        name="location"
+        class="form__input"
+        placeholder="Location"
+        id="location"
+        value="{{ article.location }}"
+      />
+    </div>
+  </div>
+
+  <div>
+    <div class="form__control">
+      <label for="description" class="form__label">Description</label>
+      <input
+        type="text"
+        name="description"
+        class="form__input"
+        placeholder="Description"
+        value="{{article.description}}"
+        id="description"
+        required
+      />
+    </div>
+
+    <fieldset class="form__fieldset">
+      <legend class="form__label">Categories</legend>
+      {% for category in categories %} {% set category_id = category['id'] %}
+      <div>
+        <input
+          type="checkbox"
+          name="category[]"
+          value="{{ category['id']}}"
+          id="category{{ category['id']}}"
+          {%
+          if
+          category_id
+          in
+          category_ids
+          %}
+          checked
+          {%
+          endif
+          %}
+        />
+        <label class="text-capitalized ml-1" for="category{{ category['id']}}"
+          >{{ category['name'] }}</label
+        >
+      </div>
+      {% endfor %}
+    </fieldset>
+  </div>
+</div>
+
+<div class="form__control">
+  <label class="form__label" for="intro">Intro</label>
+  <textarea
+    name="intro"
+    class="form__input"
+    rows="15"
+    cols="55"
+    id="intro"
+    value="{{ article.intro }}"
+    required
+  >
+        {{ article.intro }}</textarea
+  >
+</div>
+
+<div class="form__control">
+  <label class="form__label" for="content">Content</label>
+  <textarea
+    name="content"
+    class="form__input"
+    rows="25"
+    cols="55"
+    id="body"
+    value="{{ article.content }}"
+    required
+  >
+          {{ article.content }}</textarea
+  >
+</div>
+
+<button type="submit" class="button button--primary my-4 d-block mx-auto">
+  Save
+</button>
+<!-- </form> -->

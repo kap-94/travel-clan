@@ -1,0 +1,101 @@
+.form {
+  background-color: var(--color-white);
+  padding: 5rem;
+
+  &__generals {
+    display: flex;
+
+    @include respond(tab-port) {
+      flex-direction: column;
+    }
+
+    & > :first-child {
+      margin-right: 5rem;
+      @include respond(tab-port) {
+        margin-right: unset;
+      }
+    }
+
+    & > * {
+      width: 50%;
+
+      @include respond(tab-port) {
+        width: 100%;
+      }
+    }
+  }
+
+  &__title {
+    font-size: 3rem;
+  }
+
+  &__control {
+    margin-bottom: 2rem;
+  }
+
+  &__fieldset {
+    border: none;
+  }
+
+  &__input {
+    background-color: whitesmoke;
+    border-bottom: 3px solid transparent;
+    border-radius: 2px;
+    border: none;
+    color: inherit;
+    display: block;
+    font-size: 1.5rem;
+    font-family: inherit;
+    padding: 1.5rem;
+    width: 100%;
+    transition: all 0.3s;
+
+    &:focus {
+      outline: none;
+      box-shadow: 0 1rem 2rem rgba(var(--color-black), 0.1);
+      border-bottom: 3px solid var(--color-secondary);
+    }
+
+    &:focus:invalid {
+      border-bottom: 3px solid var(--color-danger);
+    }
+
+    &::-webkit-input-placeholder {
+      color: var(--color-grey-dark);
+    }
+  }
+
+  &__label {
+    font-size: 1.65rem;
+    font-weight: 700;
+    margin-top: 0.7rem;
+    display: block;
+    transition: all 0.3s;
+  }
+
+  &__input:placeholder-shown + &__label {
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-4rem);
+  }
+
+  &__image-controls {
+    display: flex;
+    justify-content: space-around;
+    overflow: hidden;
+
+    @include respond(tab-port) {
+      flex-direction: column;
+      align-items: flex-start;
+      margin-bottom: 2rem;
+    }
+  }
+
+  &__image {
+    display: block;
+    margin: 0 auto;
+    max-height: 75rem;
+    max-width: 75rem;
+    width: 100%;
+  }
+}

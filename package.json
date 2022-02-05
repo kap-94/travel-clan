@@ -1,0 +1,17 @@
+{
+  "name": "travel-clan",
+  "version": "1.0.0",
+  "description": "Travel blog with full CRUD backend",
+  "main": "index.html",
+  "directories": {
+    "test": "tests"
+  },
+  "scripts": {
+    "compile:sass": "sass public/sass/main.scss public/css/styles.css --watch"
+  },
+  "author": "kap94",
+  "license": "ISC",
+  "dependencies": {
+    "sass": "^1.42.1"
+  }
+}

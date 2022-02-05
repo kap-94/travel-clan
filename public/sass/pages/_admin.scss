@@ -1,0 +1,26 @@
+.page-admin {
+  grid-column: full-start / full-end;
+  background-color: rgba($color-black, 0.9);
+
+  @include respond(tab-port) {
+    grid-column: sidebar-start / full-end;
+  }
+
+  &--articles {
+    padding: 5rem;
+  }
+
+  &--article {
+    padding: 3.5vw 10vw;
+
+    @include respond(tab-port) {
+      padding: 0;
+    }
+  }
+
+  &--centered {
+    display: grid;
+    place-content: center;
+    height: 100vh;
+  }
+}

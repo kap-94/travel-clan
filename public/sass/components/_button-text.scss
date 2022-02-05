@@ -1,0 +1,21 @@
+.button-text {
+  border-bottom: 2px solid var(--color-black);
+  color: var(--color-black);
+  font-size: 1.65rem;
+  font-weight: 500;
+  padding: 1rem 1.5rem;
+  text-align: center;
+  text-decoration: none;
+  transition: all 0.2s ease-in;
+  width: 15rem;
+
+  &:hover {
+    background-color: var(--color-black);
+    color: var(--color-white);
+  }
+
+  &--large {
+    display: block;
+    width: 100%;
+  }
+}

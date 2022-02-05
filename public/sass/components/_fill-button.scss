@@ -1,0 +1,50 @@
+.fill-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--color-black);
+  cursor: pointer;
+  font-weight: 500;
+  font-size: 1.65rem;
+  text-decoration: none;
+  text-transform: uppercase;
+  padding: 1.5rem 3rem;
+  position: relative;
+
+  &--content {
+    z-index: 10;
+    color: var(--color-white);
+
+    transition: color 0.3s;
+  }
+
+  &--fill-one,
+  &--fill-two {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+  }
+
+  &--fill-one {
+    background-color: var(--color-black);
+    width: 100%;
+  }
+
+  &--fill-two {
+    background-color: #fc0;
+    width: 0;
+
+    transition: width 0.3s ease-in-out;
+  }
+
+  &:hover {
+    .fill-button--fill-two {
+      width: 100%;
+    }
+    .fill-button--content {
+      color: var(--color-black);
+    }
+  }
+}

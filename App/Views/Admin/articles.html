@@ -1,0 +1,60 @@
+{% extends 'base-admin.html' %} {% block body %}
+
+<div class="page-admin page-admin--articles">
+  <div>{% include 'paginator.html' %}</div>
+
+  <div class="gallery-admin">
+    {% if articles is empty %}
+
+    <p>No articles found.</p>
+
+    {% else %} {% for article in articles %}
+
+    <div class="card-admin">
+      <img
+        src="./../../../uploads/{{ article.image_file }}"
+        class="card-admin__image"
+      />
+
+      <a
+        href="/articles/{{article.id}}/show-delete"
+        class="card-admin__delete delete-modal"
+      >
+        &#10006;
+      </a>
+
+      <a href="/article/{{article.id}}" class="card-admin__name">
+        <h4>{{ article.title }}</h4>
+      </a>
+      <div class="card-admin__location mt-3">
+        <h5 class="mr-3">Location</h5>
+        <p>{{article.location}}</p>
+      </div>
+      <div class="card-admin__published-at">
+        <h5 class="mr-3">Published At</h5>
+        <p>{{article.published_at}}</p>
+      </div>
+      {% if null not in article.category_names %}
+      <div class="card-admin__categories text-capitalized">
+        <h5 class="mr-3">Categories</h5>
+        <p>
+          {% for category in article.category_names %} {{ category }}{% endfor
+          %}
+        </p>
+      </div>
+      {% endif %}
+      <div class="card-admin__description">
+        <p>{{article.description}}</p>
+      </div>
+
+      <button class="card-admin__button">
+        <a href="articles/{{article.id}}/edit" class="text-white d-block p-1"
+          >Edit</a
+        >
+      </button>
+    </div>
+
+    {% endfor %} {% endif %}
+  </div>
+</div>
+{% endblock %}

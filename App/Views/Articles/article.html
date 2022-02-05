@@ -1,0 +1,56 @@
+{% extends 'base-client.html' %} {% block title %} {% if article %} {{
+article[0]['title'] }} {% else %} Article {% endif %} {% endblock %} {% block
+body %} {% if article %}
+
+<div class="page-article">
+  <article class="article">
+    <div class="article__main-image-box">
+      {% if article[0]['image_file'] %}
+      <img
+        class="article__main-image"
+        src="../../../uploads/{{ article[0]['image_file'] }}"
+        alt="{{ article[0]['title'] }}"
+      />
+      {% endif %}
+
+      <div class="article__header">
+        <h1 class="article__title">{{ article[0]['title'] }}</h1>
+        <span class="article__author">{{ article[0]['author'] }}</span>
+        <br />
+        <span class="article__published-at"
+          >{{ article[0]['published_at'] }}</span
+        >
+        <br />
+
+        {% if article[0]['category_name']%}
+        <span class="article__author text-capitalized">
+          {% for arr in article %} {{ arr['category_name'] }} {% endfor %}
+        </span>
+        {% endif %}
+      </div>
+    </div>
+
+    <div class="article__info">
+      <div class="article__content">
+        <p>{{ article[0]['intro'] | raw}}</p>
+      </div>
+
+      {% if article[0]['image_file'] %}
+      <img
+        class="article__image"
+        src="../../../uploads/{{ article[0]['image_file'] }}"
+        alt="{{ article[0]['title'] }}"
+      />
+      {% endif %}
+      <div class="article__content">
+        <p>{{ article[0]['content'] | raw}}</p>
+      </div>
+      <!-- <p class="article__content">{{ article.content | striptags('<strong><em>') | raw}}</p> -->
+    </div>
+  </article>
+
+  {% else %}
+  <p>article not found</p>
+  {% endif %}
+</div>
+{% endblock %}

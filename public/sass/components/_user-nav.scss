@@ -1,0 +1,21 @@
+.user-nav {
+  position: relative;
+
+  &__user {
+    display: flex;
+    align-items: center;
+    color: var(--color-white);
+    font-weight: 500;
+    font-size: 1.65rem;
+  }
+
+  &__user-name {
+    margin-right: 2rem;
+  }
+
+  &__user-photo {
+    border-radius: 50%;
+    cursor: pointer;
+    height: 3.75rem;
+  }
+}

@@ -1,0 +1,18 @@
+.page-articles {
+  @include eightColumnGirdLayout;
+  background-color: #000000;
+  padding: 10rem 0;
+}
+
+.section-articles {
+  grid-column: center-start / center-end;
+
+  @include respond(tab-port) {
+    grid-column: full-start / full-end;
+    margin: 0 3vw;
+  }
+
+  @include respond(phone) {
+    margin: 0 5vw;
+  }
+}

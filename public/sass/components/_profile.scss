@@ -1,0 +1,19 @@
+.profile {
+  background-color: var(--color-grey-light);
+  width: 30rem;
+  padding: 3.5rem;
+
+  &__info {
+    margin: 3rem 0;
+  }
+
+  &__label {
+    font-weight: 700;
+  }
+
+  &__value {
+    &:not(:last-child) {
+      margin-bottom: 1rem;
+    }
+  }
+}

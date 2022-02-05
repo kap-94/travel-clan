@@ -1,0 +1,54 @@
+.programs {
+  display: flex;
+  justify-content: center;
+  perspective: 170rem;
+  -moz-perspective: 170rem;
+  padding: 5rem 0 15rem;
+  overflow: hidden;
+
+  @include respond(big-desktop) {
+    padding: 5rem 10vw 15rem;
+  }
+
+  @include respond(phone) {
+    flex-direction: column;
+  }
+
+  & > * {
+    width: 40rem;
+
+    @include respond(phone) {
+      transform: unset !important;
+      margin: 0 auto;
+      width: 80%;
+
+      &:not(:last-child) {
+        margin-bottom: 5rem;
+      }
+    }
+  }
+
+  & > :first-child {
+    transform: translate3d(-75px, 0, -250px);
+
+    @include respond(tab-land) {
+      transform: translate3d(-50px, 0, -250px);
+    }
+
+    @include respond(tab-port) {
+      transform: translate3d(-40px, 0, -250px);
+    }
+  }
+
+  & > :last-child {
+    transform: translate3d(75px, 0, -250px);
+
+    @include respond(tab-land) {
+      transform: translate3d(50px, 0, -250px);
+    }
+
+    @include respond(tab-port) {
+      transform: translate3d(40px, 0, -250px);
+    }
+  }
+}

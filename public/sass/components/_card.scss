@@ -1,0 +1,42 @@
+.card {
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+
+  &__image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s cubic-bezier(0.25, 0.45, 0.45, 0.95);
+
+    &:hover {
+      transform: scale(1.1);
+    }
+  }
+
+  &__body {
+    color: var(--color-white);
+    position: absolute;
+    left: 5%;
+    bottom: 10%;
+  }
+
+  &__title {
+    font-size: 1.5vw;
+    line-height: 1.5;
+    margin-bottom: 0.5rem;
+
+    @include respond(tab-land) {
+      font-size: 3rem;
+    }
+  }
+
+  &__text {
+    font-size: 1.5rem;
+    letter-spacing: 1px;
+  }
+
+  &--border {
+    box-shadow: 4px 4px 0 0 #fc0;
+  }
+}

@@ -1,0 +1,63 @@
+{% extends 'base.html' %} {% block js %}
+<script type="module" defer src="/js/scriptClient.js"></script>
+{% endblock %} {% block navigation %}
+
+<div class="fixed-navigation">
+  <nav class="fixed-navigation__nav">
+    <ul class="fixed-navigation__list">
+      <li class="fixed-navigation__item">
+        <a href="/" class="fixed-navigation__link">Home</a>
+      </li>
+      <li class="fixed-navigation__item">
+        <a href="/articles" class="fixed-navigation__link">Articles</a>
+      </li>
+      <li class="fixed-navigation__item">
+        <a href="/admin" class="fixed-navigation__link">Admin</a>
+      </li>
+    </ul>
+  </nav>
+</div>
+
+<nav class="navbar">
+  <h1><a href="/" class="navbar__brand">TravelClan</a></h1>
+
+  <ul class="navbar__nav">
+    <li class="navbar__item"><a class="navbar__link" href="/">Home</a></li>
+    <li class="navbar__item">
+      <a class="navbar__link fill-button" href="/admin">
+        <span class="fill-button--fill-one"></span>
+        <span class="fill-button--fill-two"></span>
+        <span class="fill-button--content">Admin</span>
+      </a>
+    </li>
+
+    <li class="navbar__item navbar__item-icon">
+      <input type="checkbox" class="navbar__checkbox" id="nav-toggle" />
+
+      <label for="nav-toggle" class="navbar__link navbar__button">
+        <span class="navbar__icon">&nbsp;</span>
+      </label>
+    </li>
+  </ul>
+</nav>
+
+{% endblock %} {% block body %} {% endblock %} {% block footer %}
+<footer class="footer">
+  <div class="footer__logo">
+    <h1>TravelClan</h1>
+  </div>
+
+  <div class="footer__text">
+    If you are looking for a new way of see the world, share ang the ideas for
+    the next adventure, this is the place.
+  </div>
+
+  <div class="footer__copyright">&#169; 2022 Copyright</div>
+
+  <div class="footer__icons">
+    <i class="fab fa-instagram"></i>
+    <i class="fab fa-facebook"></i>
+    <i class="fab fa-twitter"></i>
+  </div>
+</footer>
+{% endblock %}

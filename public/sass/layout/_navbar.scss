@@ -1,0 +1,115 @@
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-image: linear-gradient(
+      to right,
+      rgb(255, 255, 255) 0%,
+      rgba(255, 255, 255, 0.815) 55%,
+      rgb(255, 255, 255) 95%
+    ),
+    url("./../../assets/images/navbar-bg-2400w.jpeg");
+  background-size: cover;
+  padding: 0 5vw;
+
+  &__brand {
+    text-decoration: none;
+    color: var(--color-black);
+  }
+
+  &__nav {
+    display: flex;
+  }
+
+  &__item {
+    list-style: none;
+
+    &:first-child {
+      transition: background-color 0.3s;
+      &:hover {
+        background-color: var(--color-grey-light);
+      }
+    }
+
+    @include respond(phone) {
+      &:not(:last-child) {
+        display: none;
+      }
+    }
+  }
+
+  &__link {
+    @include flexCenter;
+    color: var(--color-black);
+    cursor: pointer;
+    font-weight: 500;
+    font-size: 1.65rem;
+    height: 5rem;
+    text-decoration: none;
+    text-transform: uppercase;
+    padding: 0 3rem;
+    position: relative;
+  }
+
+  &__button {
+    background-color: var(--color-white);
+    z-index: 1000;
+  }
+
+  &__button:hover &__icon::before {
+    top: -1rem;
+  }
+
+  &__button:hover &__icon::after {
+    top: 1rem;
+  }
+
+  &__icon {
+    position: absolute;
+    left: 25%;
+    width: 2.35rem;
+
+    &,
+    &::before,
+    &::after {
+      background-color: var(--color-grey-dark);
+      display: inline-block;
+      height: 2px;
+    }
+
+    &::before,
+    &::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      width: 3rem;
+      transition: all 0.2s;
+    }
+
+    &::before {
+      top: -0.8rem;
+    }
+
+    &::after {
+      top: 0.8rem;
+    }
+  }
+
+  &__checkbox {
+    display: none;
+  }
+
+  &__checkbox:checked + &__button &__icon {
+    background-color: transparent;
+  }
+
+  &__checkbox:checked + &__button &__icon::before {
+    top: 0;
+    transform: rotate(135deg);
+  }
+
+  &__checkbox:checked + &__button &__icon::after {
+    top: 0;
+    transform: rotate(-135deg);
+  }
+}

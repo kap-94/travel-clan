@@ -1,0 +1,21 @@
+{% extends 'base-admin.html' %} {% block title %} Profile {% endblock %} {%
+block body %}
+
+<div class="page-admin page-admin--centered">
+  <div class="profile">
+    <h2 class="heading-secondary">Profile</h2>
+
+    <dl class="profile__info">
+      <dt class="profile__label">Name</dt>
+      <dd class="profile__value">{{ user.name }}</dd>
+      <dt class="profile__label">Email</dt>
+      <dd class="profile__value">{{ user.email }}</dd>
+    </dl>
+
+    <a href="/profile/edit" class="button button--primary button--large"
+      >Edit</a
+    >
+  </div>
+</div>
+
+{% endblock %}

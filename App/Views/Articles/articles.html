@@ -1,0 +1,50 @@
+{% extends 'base-client.html' %} {% block title %} Articles {% endblock %} {%
+block body %}
+
+<div class="page-articles">
+  <section class="section-articles">
+    <div class="text-center text-white mb-4">
+      <h1 class="text-white heading-primary">Newest Articles</h1>
+      <h3 class="heading-tertiary fw-500">
+        Experience the adventures of passionate travelers through their eyes
+      </h3>
+    </div>
+
+    {% if articles is empty %}
+    <div style="height: 50vh">
+      <h2 class="text-center text-white mt-10">No articles found.</h2>
+    </div>
+    {% else %}
+
+    <div class="gallery-articles">
+      {% set i = 1 %} {% for article in articles | slice(0,9) %}
+
+      <a
+        href="/article/{{ article.id }}"
+        class="card gallery-articles__item gallery-articles__item--{{i}}"
+      >
+        <div class="gallery-articles__card">
+          <img
+            src="../../../uploads/{{ article.image_file }}"
+            class="card__image"
+            alt="Article"
+          />
+          <div class="card__body">
+            <p class="card__text">{{ article.location }}</p>
+            {% if article.category_names %}
+            <p class="card__text text-capitalized">
+              {% for category in article.category_names%} {{ category }} {%
+              endfor %}
+            </p>
+            {% endif %}
+            <h3 class="card__title">{{ article.title }}</h3>
+            <p class="card__description">{{ article.description }}</p>
+            <span class="fs-3">&rarr;</span>
+          </div>
+        </div>
+      </a>
+      {% set i = i + 1 %} {% endfor %} {% endif %}
+    </div>
+  </section>
+</div>
+{% endblock %}

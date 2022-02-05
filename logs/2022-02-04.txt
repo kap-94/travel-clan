@@ -1,0 +1,28 @@
+[04-Feb-2022 21:24:55 UTC] Uncaught exception: 'ErrorException' with message 'Undefined array key "host"'
+Stack trace: #0 /Users/pablokaram/dev/portfolio/travel-clan/Core/Model.php(33): Core\Error::errorHandler(2, 'Undefined array...', '/Users/pablokar...', 33)
+#1 /Users/pablokaram/dev/portfolio/travel-clan/App/Models/RememberedLogins.php(30): Core\Model::getDB()
+#2 /Users/pablokaram/dev/portfolio/travel-clan/App/Auth.php(112): App\Models\RememberedLogins::findByToken(Object(App\Token))
+#3 /Users/pablokaram/dev/portfolio/travel-clan/App/Auth.php(97): App\Auth::loginFromRememberCookie()
+#4 /Users/pablokaram/dev/portfolio/travel-clan/Core/View.php(56): App\Auth::getUser()
+#5 /Users/pablokaram/dev/portfolio/travel-clan/Core/View.php(40): Core\View::getTemplate('Login/new.html', Array)
+#6 /Users/pablokaram/dev/portfolio/travel-clan/App/Controllers/Login.php(24): Core\View::renderTemplate('Login/new.html')
+#7 [internal function]: App\Controllers\Login->newAction()
+#8 /Users/pablokaram/dev/portfolio/travel-clan/Core/Controller.php(51): call_user_func_array(Array, Array)
+#9 /Users/pablokaram/dev/portfolio/travel-clan/Core/Router.php(121): Core\Controller->__call('new', Array)
+#10 /Users/pablokaram/dev/portfolio/travel-clan/public/index.php(49): Core\Router->dispatch('login/new')
+#11 {main}
+Thrown in '/Users/pablokaram/dev/portfolio/travel-clan/Core/Model.php' on line 33
+[04-Feb-2022 21:24:59 UTC] Uncaught exception: 'ErrorException' with message 'Undefined array key "host"'
+Stack trace: #0 /Users/pablokaram/dev/portfolio/travel-clan/Core/Model.php(33): Core\Error::errorHandler(2, 'Undefined array...', '/Users/pablokar...', 33)
+#1 /Users/pablokaram/dev/portfolio/travel-clan/App/Models/RememberedLogins.php(30): Core\Model::getDB()
+#2 /Users/pablokaram/dev/portfolio/travel-clan/App/Auth.php(112): App\Models\RememberedLogins::findByToken(Object(App\Token))
+#3 /Users/pablokaram/dev/portfolio/travel-clan/App/Auth.php(97): App\Auth::loginFromRememberCookie()
+#4 /Users/pablokaram/dev/portfolio/travel-clan/Core/View.php(56): App\Auth::getUser()
+#5 /Users/pablokaram/dev/portfolio/travel-clan/Core/View.php(40): Core\View::getTemplate('Login/new.html', Array)
+#6 /Users/pablokaram/dev/portfolio/travel-clan/App/Controllers/Login.php(24): Core\View::renderTemplate('Login/new.html')
+#7 [internal function]: App\Controllers\Login->newAction()
+#8 /Users/pablokaram/dev/portfolio/travel-clan/Core/Controller.php(51): call_user_func_array(Array, Array)
+#9 /Users/pablokaram/dev/portfolio/travel-clan/Core/Router.php(121): Core\Controller->__call('new', Array)
+#10 /Users/pablokaram/dev/portfolio/travel-clan/public/index.php(49): Core\Router->dispatch('login/new')
+#11 {main}
+Thrown in '/Users/pablokaram/dev/portfolio/travel-clan/Core/Model.php' on line 33

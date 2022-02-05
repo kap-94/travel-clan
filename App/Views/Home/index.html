@@ -1,0 +1,305 @@
+{% extends 'base-client.html' %} {% block title %} Explore the world {% endblock
+%} {% block js %} {{ parent() }}
+<script defer src="/js/components/slider.js"></script>
+{% endblock %} {% block body %}
+
+<div class="page-home">
+  <section class="section-hero">
+    <div class="text-center mb-5">
+      <h1 class="heading-primary">Featured Stories</h1>
+      <h4 class="heading-fourth fw-500">Inspiration for your next adventure</h4>
+    </div>
+
+    <div class="featured-articles">
+      {% set i = 1 %} {% for article in articles | slice(0,3)%}
+      <a
+        href="/article/{{article.id}}"
+        class="card card--border featured-articles__item featured-articles__item--{{i}} "
+      >
+        <img
+          src="../../../uploads/{{ article.image_file }}"
+          alt="Article Image"
+          class="card__image"
+        />
+        <div class="card__body">
+          <!-- <p class="card__text">Travel</p> -->
+          <p class="card__text">{{article.location}}</p>
+          <h3 class="card__title">{{article.title}}</h3>
+          <span class="fs-3">&rarr;</span>
+        </div>
+      </a>
+      {% set i = i + 1 %} {% endfor %}
+
+      <div class="new-articles">
+        <h3
+          class="new-articles__title heading-tertiary text-white text-uppercase"
+        >
+          Whats New?
+        </h3>
+
+        <div class="new-articles__list">
+          {% for article in articles | slice(3,5) %}
+          <a href="/article/{{article.id}}" class="card-horizontal">
+            <div class="card-horizontal__body">
+              <h5 class="card-horizontal__title heading-fifth">
+                {{article.title}}
+              </h5>
+              <p class="card-horizontal__text">{{article.description}}</p>
+            </div>
+            <div class="card-horizontal__image-box">
+              <img
+                src="../../../uploads/{{ article.image_file }}"
+                class="card-horizontal__image"
+                alt="New Article Image"
+              />
+            </div>
+          </a>
+          {% endfor %}
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section-categories">
+    <h1 class="heading-secondary text-center my-5 mb-4">AROUND THE WORLD</h1>
+
+    <div class="categories">
+      {% for category in categories %}
+
+      <div class="card-compact">
+        <div class="card-compact__header">
+          <a href="category/{{category.name}}">
+            <img
+              srcset="
+                ./assets/images/categories/{{category['name']}}-600w.jpg  1x,
+                ./assets/images/categories/{{category['name']}}-1200w.jpg 2x
+              "
+              alt="Article Category"
+              class="card-compact__image"
+              src="./assets/images/categories/{{category['name']}}-1200w.jpg"
+            />
+          </a>
+        </div>
+        <div class="card-compact__body">
+          <h5 class="card-compact__title">{{category['name']}}</h5>
+          <p class="card-compact__text">Lorem ipsum dolor sit amet.</p>
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+  </section>
+
+  <section class="section-slider">
+    <div class="slider-component">
+      <div class="slider-component__slider slider">
+        <div class="slide">
+          <img
+            srcset="
+              ./assets/images/best-photos-month/mountains-1200w.jpg 1x,
+              ./assets/images/best-photos-month/mountains-2400w.jpg 2x
+            "
+            alt="Awarded photo"
+            src="/assets/images/best-photos-month/mountains-1200w.jpg"
+          />
+        </div>
+
+        <div class="slide">
+          <img
+            srcset="
+              ./assets/images/best-photos-month/sahara-1200w.jpg 1x,
+              ./assets/images/best-photos-month/sahara-2400w.jpg 2x
+            "
+            alt="Awarded photo"
+            src="/assets/images/best-photos-month/sahara-1200w.jpg"
+          />
+        </div>
+
+        <div class="slide">
+          <img
+            srcset="
+              ./assets/images/best-photos-month/surf-1200w.jpg 1x,
+              ./assets/images/best-photos-month/surf-2400w.jpg 2x
+            "
+            alt="Awarded photo"
+            src="/assets/images/best-photos-month/surf-1200w.jpg"
+          />
+        </div>
+
+        <button class="slider__button slider__button--left">&larr;</button>
+        <button class="slider__button slider__button--right">&rarr;</button>
+      </div>
+
+      <div class="slider-component__text-box">
+        <h5 class="heading-fifth">Photos of the month</h5>
+        <h2 class="heading-secondary slider-component__title">
+          Eyes to another world
+        </h2>
+
+        <div class="slider-component__text">
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum
+            quidem, architecto numquam iusto totam optio minus repellat aut!.
+          </p>
+          <a href="#" class="button-text">Learn More</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section-info">
+    <div class="frame-background-full">
+      <h1 class="heading-primary frame-background-full__title">
+        Capturing The Year In An Instant
+      </h1>
+      <p class="paragraph">
+        We revisit 2021 throught the lens of the TravelClan photographers who
+        documented the most important events of the year
+      </p>
+      <a href="/articles" class="button button--primary mx-auto">Collection </a>
+    </div>
+  </section>
+
+  <section class="section-programs">
+    <h2 class="heading-secondary text-center text-uppercase mt-10">
+      Our Programs
+    </h2>
+
+    <div class="programs">
+      <div class="card-double">
+        <div class="card-double__side card-double__side--front">
+          <div class="card-double__picture card-double__picture--1">&nbsp;</div>
+
+          <h4 class="card-double__heading">
+            <span class="card-double__heading-span"
+              >Travel Groups &amp; Community</span
+            >
+          </h4>
+        </div>
+
+        <div class="card-double__side card-double__side--back">
+          <div class="card-double__picture-back">&nbsp;</div>
+
+          <div class="card-double__info-box">
+            <h4 class="heading-fourth text-black mb-3">
+              Travel Groups &amp; Community
+            </h4>
+
+            <div class="paragraph text-black mb-3">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae
+              aliquam tenetur, earum voluptatem illo neque expedita quis enim
+              nihil corporis.
+            </div>
+            <div class="paragraph text-black">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae
+              aliquam tenetur, earum voluptatem illo neque expedita quis enim
+              nihil corporis.
+            </div>
+          </div>
+
+          <!-- <a href="#" class="button-text">Check Now!</a> -->
+        </div>
+      </div>
+
+      <div class="card-double">
+        <div class="card-double__side card-double__side--front">
+          <div class="card-double__picture card-double__picture--2">&nbsp;</div>
+
+          <h4 class="card-double__heading">
+            <span class="card-double__heading-span"
+              >Surf Camp &amp; Beach Activities</span
+            >
+          </h4>
+        </div>
+
+        <div class="card-double__side card-double__side--back">
+          <div class="card-double__picture-back">&nbsp;</div>
+
+          <div class="card-double__info-box">
+            <h4 class="heading-fourth text-black mb-3">
+              Surf Camp &amp; Beach Activities
+            </h4>
+
+            <div class="paragraph text-black mb-3">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae
+              aliquam tenetur, earum voluptatem illo neque expedita quis enim
+              nihil corporis.
+            </div>
+            <div class="paragraph text-black">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae
+              aliquam tenetur, earum voluptatem illo neque expedita quis enim
+              nihil corporis.
+            </div>
+          </div>
+
+          <!-- <a href="#" class="button-text">Check Now!</a> -->
+        </div>
+      </div>
+
+      <div class="card-double">
+        <div class="card-double__side card-double__side--front">
+          <div class="card-double__picture card-double__picture--3">&nbsp;</div>
+
+          <h4 class="card-double__heading">
+            <span class="card-double__heading-span"
+              >Exploration and Senderism</span
+            >
+          </h4>
+        </div>
+
+        <div class="card-double__side card-double__side--back">
+          <div class="card-double__picture-back">&nbsp;</div>
+
+          <div class="card-double__info-box">
+            <h4 class="heading-fourth text-black mb-3">
+              Exploration and Senderism
+            </h4>
+
+            <div class="paragraph text-black mb-3">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae
+              aliquam tenetur, earum voluptatem illo neque expedita quis enim
+              nihil corporis.
+            </div>
+            <div class="paragraph text-black">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae
+              aliquam tenetur, earum voluptatem illo neque expedita quis enim
+              nihil corporis.
+            </div>
+          </div>
+
+          <!-- <a href="#" class="button-text">Check Now!</a> -->
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section-video">
+    <div class="bg-video">
+      <div class="bg-video__text-box">
+        <a href="#">
+          <h4 class="heading-fourth text-black">Photography</h4>
+        </a>
+
+        <h2 class="heading-secondary">Lorem Ipsum</h2>
+        <p class="mb-5">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae
+          nulla excepturi hic eligendi repudiandae voluptas laudantium eum
+          doloribus eius!.
+        </p>
+        <a
+          href="/articles"
+          class="button button--secondary"
+          title="Community Collection"
+          >Community Collection</a
+        >
+      </div>
+
+      <video class="bg-video__content" autoplay muted loop>
+        <source src="assets/videos/video.mp4" type="video/mp4" />
+        <source src="assets/videos/video.webm" type="video/webm" />
+        Your browser is not supported!
+      </video>
+    </div>
+  </section>
+</div>
+
+{% endblock %}

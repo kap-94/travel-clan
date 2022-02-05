@@ -1,0 +1,45 @@
+.page-home {
+  display: grid;
+  grid-template-rows: min-content;
+  grid-template-columns:
+    [full-start] minmax(6rem, 1fr) [center-start] repeat(
+      10,
+      [col-start] minmax(min-content, 14rem) [col-end]
+    )
+    [center-end]minmax(6rem, 1fr)
+    [full-end];
+}
+
+.section-hero {
+  grid-column: full-start / full-end;
+  padding: 7.5rem 0 17.5rem;
+  background-color: var(--color-black);
+}
+
+.section-categories {
+  grid-column: full-start / full-end;
+  padding: 5rem 0 12.5rem;
+
+  @include respond(big-desktop) {
+    grid-column: center-start / center-end;
+  }
+}
+
+.section-slider {
+  grid-column: full-start / full-end;
+  background-color: var(--color-white-dark);
+  padding: 15rem 0;
+}
+
+.section-info {
+  grid-column: full-start / full-end;
+}
+
+.section-programs {
+  grid-column: full-start / full-end;
+  background-color: var(--color-white-dark);
+}
+
+.section-video {
+  grid-column: full-start / full-end;
+}

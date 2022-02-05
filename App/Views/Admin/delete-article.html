@@ -1,0 +1,19 @@
+{% extends 'base-admin.html' %} {% block title %} Delete article {% endblock %}
+{% block body %}
+<div class="page-admin page-admin--centered">
+  <form
+    class="form text-center"
+    method="post"
+    action="/articles/{{ article.id }}/delete"
+  >
+    <h2>Delete article</h2>
+    <p class="mb-3">Are you sure?</p>
+
+    <div class="d-flex flex-column">
+      <button class="button button--danger mb-1">Delete</button>
+      <a href="/admin">Cancel</a>
+    </div>
+  </form>
+</div>
+
+{% endblock %}

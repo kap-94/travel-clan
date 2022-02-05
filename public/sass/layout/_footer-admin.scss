@@ -1,0 +1,9 @@
+.footer-admin {
+  grid-column: full-start / full-end;
+  background-color: rgba($color-black, 0.855);
+  height: 7rem;
+
+  @include respond(tab-port) {
+    grid-column: sidebar-start / full-end;
+  }
+}

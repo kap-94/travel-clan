@@ -1,0 +1,45 @@
+.footer {
+  display: grid;
+  grid-template-columns: 1fr 35%;
+  grid-row-gap: 5rem;
+  align-items: center;
+  background-color: var(--color-black);
+  color: var(--color-grey-light);
+  padding: 10rem 10vw;
+
+  @include respond(tab-land) {
+    grid-template-columns: 35% 1fr;
+  }
+
+  @include respond(phone) {
+    grid-template-columns: 1fr;
+    justify-items: center;
+  }
+
+  &__icons {
+    font-size: 2rem;
+    justify-self: end;
+
+    @include respond(phone) {
+      justify-self: unset;
+    }
+
+    i {
+      cursor: pointer;
+      margin: 0 1rem;
+    }
+  }
+
+  &__copyright,
+  &__text {
+    color: var(--color-grey-dark);
+  }
+
+  &__text {
+    text-align: right;
+
+    @include respond(phone) {
+      text-align: center;
+    }
+  }
+}

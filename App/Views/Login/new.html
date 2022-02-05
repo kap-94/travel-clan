@@ -1,0 +1,93 @@
+{% extends 'base-client.html' %} {% block title %} Login {% endblock %} {% block
+body %}
+
+<div class="login-page page-signup-login">
+  {% if user.errors is not empty %}
+  <p>Errors:</p>
+  <ul>
+    {% for error in user.errors %}
+    <li>{{ error }}</li>
+    {% endfor %}
+  </ul>
+  {% endif %} {% if current_user %}
+  <div class="page-centered">
+    <h1>You are currently logged in</h1>
+  </div>
+
+  {% else %}
+  <form
+    class="form form-signup-login"
+    id="formLogin"
+    method="post"
+    action="/login/create"
+  >
+    <h1 class="form__title mb-1">Login</h1>
+
+    <p class="paragraph text-black mb-2">
+      You can try<br />
+      <span class="text-underlined">Test account:</span>
+      <strong> travelclan.community@gmail.com</strong> <br />
+      <span class="text-underlined">Password:</span>
+      <strong> clandemo88</strong> <br />
+      or signup with another account
+    </p>
+
+    <div class="form__control">
+      <input
+        class="form__input"
+        type="email"
+        name="email"
+        id="inputEmail"
+        value="{{email}}"
+        autofocus
+      />
+      <label for="inputEmail">Email</label>
+    </div>
+
+    <div class="form__control">
+      <input
+        class="form__input"
+        type="password"
+        name="password"
+        id="inputPassword"
+        autofocus
+      />
+      <label for="inputPassword">Password</label>
+    </div>
+
+    <div class="form__control">
+      <input
+        type="checkbox"
+        name="remember_me"
+        id="rememberMe"
+        {%
+        if
+        remember_me
+        %}
+        checked="checked"
+        {%
+        endif
+        %}
+      />
+      <label for="rememberMe">Remember me</label>
+    </div>
+
+    <button type="submit" class="button button--primary button--large mb-2">
+      Login
+    </button>
+
+    <div class="text-center mb-3">
+      <a href="/password/forgot" class="text-black"
+        >Do you forgot your password?</a
+      >
+    </div>
+
+    <hr class="mb-3" />
+
+    <a href="/signup/new" class="button button--secondary d-block p-1 mx-auto">
+      Signup
+    </a>
+  </form>
+  {% endif %}
+</div>
+{% endblock %}
