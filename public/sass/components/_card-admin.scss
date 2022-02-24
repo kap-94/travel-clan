@@ -53,7 +53,7 @@
     justify-self: center;
     align-self: end;
 
-    background-color: $color-tertiary;
+    background-color: $color-secondary;
     color: $color-white;
     font-size: 1.6rem;
     font-weight: 500;
@@ -85,7 +85,7 @@
   &__button {
     grid-column: 1 / -1;
     // background-color: rgba($color-black, 0.8);
-    background-color: $color-tertiary;
+    background-color: $color-black;
     border: none;
     color: $color-white;
     transition: filter 0.2s;
