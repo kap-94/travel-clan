@@ -1986,7 +1986,7 @@ body {
 .section-hero__title::after {
   content: "";
   position: absolute;
-  bottom: 23px;
+  bottom: 21px;
   left: 0;
   background-color: #d53568;
   width: 20%;
@@ -2009,6 +2009,11 @@ body {
   line-height: 1;
   width: 50%;
   z-index: -1;
+}
+@media only screen and (min-width: 112.5em) {
+  .section-categories__watermark {
+    grid-column: center-start/center-end;
+  }
 }
 @media only screen and (min-width: 112.5em) {
   .section-categories {

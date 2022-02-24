@@ -22,7 +22,7 @@
     &::after {
       content: "";
       position: absolute;
-      bottom: 23px;
+      bottom: 21px;
       left: 0;
       background-color: $color-primary;
       width: 20%;
@@ -47,6 +47,10 @@
     line-height: 1;
     width: 50%;
     z-index: -1;
+
+    @include respond(big-desktop) {
+      grid-column: center-start / center-end;
+    }
   }
 
   @include respond(big-desktop) {
