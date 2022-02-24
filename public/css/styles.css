@@ -1981,15 +1981,17 @@ body {
 }
 .section-hero__title {
   position: relative;
+  z-index: 1;
 }
 .section-hero__title::after {
   content: "";
   position: absolute;
-  bottom: 0;
+  bottom: 23px;
   left: 0;
   background-color: #d53568;
   width: 20%;
-  height: 5px;
+  height: 10px;
+  z-index: -1;
 }
 
 .section-categories {
