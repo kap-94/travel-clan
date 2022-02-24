@@ -19,6 +19,15 @@
 .section-categories {
   grid-column: full-start / full-end;
   padding: 5rem 0 12.5rem;
+  position: relative;
+
+  &__watermark {
+    position: absolute;
+    top: 0;
+    right: 0;
+    background-color: $color-grey-light;
+    height: 45rem;
+  }
 
   @include respond(big-desktop) {
     grid-column: center-start / center-end;

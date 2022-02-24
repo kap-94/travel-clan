@@ -1989,6 +1989,14 @@ body {
 .section-categories {
   grid-column: full-start/full-end;
   padding: 5rem 0 12.5rem;
+  position: relative;
+}
+.section-categories__watermark {
+  position: absolute;
+  top: 0;
+  right: 0;
+  background-color: #eeeeee;
+  height: 45rem;
 }
 @media only screen and (min-width: 112.5em) {
   .section-categories {
