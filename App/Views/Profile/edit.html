@@ -11,7 +11,12 @@ block body %}
   </ul>
   {% endif %}
 
-  <form class="form" id="formProfile" action="/profile/update" method="post">
+  <form
+    class="form form--profile-edit"
+    id="formProfile"
+    action="/profile/update"
+    method="post"
+  >
     <input type="hidden" id="profileId" value="{{ user.id }}" />
 
     <h2 class="heading-secondary">Edit</h2>

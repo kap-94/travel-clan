@@ -1390,7 +1390,12 @@ body {
 
 .form {
   background-color: white;
+}
+.form--article {
   padding: 5rem;
+}
+.form--profile-edit {
+  padding: 2.5rem;
 }
 .form__generals {
   display: flex;
@@ -1681,7 +1686,7 @@ body {
 .profile {
   background-color: #eeeeee;
   width: 30rem;
-  padding: 2.5rem;
+  padding: 5rem;
 }
 .profile__info {
   margin: 3rem 0;
@@ -1915,7 +1920,7 @@ body {
 
 .page-admin {
   grid-column: full-start/full-end;
-  background-color: rgba(0, 0, 0, 0.9);
+  background-color: rgba(0, 0, 0, 0.85);
   min-height: 100vh;
 }
 @media only screen and (max-width: 56.25em) {

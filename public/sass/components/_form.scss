@@ -1,6 +1,13 @@
 .form {
   background-color: $color-white;
-  padding: 5rem;
+
+  &--article {
+    padding: 5rem;
+  }
+
+  &--profile-edit {
+    padding: 2.5rem;
+  }
 
   &__generals {
     display: flex;

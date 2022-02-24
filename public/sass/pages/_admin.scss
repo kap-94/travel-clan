@@ -1,6 +1,6 @@
 .page-admin {
   grid-column: full-start / full-end;
-  background-color: rgba($color-black, 0.9);
+  background-color: rgba($color-black, 0.85);
   min-height: 100vh;
 
   @include respond(tab-port) {
