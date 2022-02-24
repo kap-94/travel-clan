@@ -5,7 +5,7 @@ namespace App;
 /**
  * Token class
  * 
- * PHP version 7.4
+ * PHP @version 7.4
  */
 class Token
 {
@@ -48,6 +48,6 @@ class Token
      */
     public function getHash(): string
     {
-        return hash_hmac('sha256', $this->token, Config::SECRET_KEY); // sha256 = 64 chars
+        return hash_hmac('sha256', $this->token, getenv('SECRET_KEY_HASH')); // sha256 = 64 chars
     }
 }

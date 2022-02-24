@@ -2,7 +2,7 @@
 
 namespace App;
 
-use App\Config;
+// use App\Config;
 use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\SMTP;
 use PHPMailer\PHPMailer\Exception;
@@ -10,7 +10,7 @@ use PHPMailer\PHPMailer\Exception;
 /**
  * Class Mail
  * 
- * PHP version 7.4
+ * PHP @version 7.4
  */
 class Mail
 {
@@ -34,14 +34,14 @@ class Mail
             $mail->isSMTP();                                            //Send using SMTP
             $mail->Host       = 'smtp.gmail.com';                       //Set the SMTP server to send through
             $mail->SMTPAuth   = true;                                   //Enable SMTP authentication
-            $mail->Username   = Config::MAIL_ACCOUNT;                   //SMTP username
-            $mail->Password   = Config::MAIL_PASSWORD;                  //SMTP password
+            $mail->Username   = getenv('MAIL_ACCOUNT');                   //SMTP username
+            $mail->Password   = getenv('MAIL_PASSWORD');                  //SMTP password
             $mail->SMTPSecure = 'tls';                                  //Enable implicit TLS encryption
             $mail->Port       = 587;
 
 
             //Recipients
-            $mail->setFrom(Config::MAIL_ACCOUNT);
+            $mail->setFrom(getenv('MAIL_ACCOUNT'));
             $mail->addAddress($to);
 
             //Content

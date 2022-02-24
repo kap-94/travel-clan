@@ -3,12 +3,12 @@
 namespace Core;
 
 use PDO;
-use App\Config;
+// use App\Config;
 
 /**
  * Base model
  *
- * PHP version 7.4
+ * PHP @version 7.4
  */
 abstract class Model
 {
