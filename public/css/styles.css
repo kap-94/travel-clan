@@ -1092,7 +1092,7 @@ body {
   position: relative;
 }
 .card-compact__title::before {
-  border-left: 4px solid #d53568;
+  border-left: 4px solid #ffcc00;
   content: "";
   display: inline-block;
   position: absolute;
@@ -1988,7 +1988,7 @@ body {
   position: absolute;
   bottom: 21px;
   left: 0;
-  background-color: #d53568;
+  background-color: #ffcc00;
   width: 20%;
   height: 10px;
   z-index: -1;
