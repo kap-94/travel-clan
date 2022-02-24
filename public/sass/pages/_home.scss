@@ -25,8 +25,12 @@
       bottom: 21px;
       left: 0;
       // background-color: $color-secondary;
-      background-image: (to right, $color-primary, $color-secondary);
-      width: 20%;
+      background-image: linear-gradient(
+        to right,
+        $color-primary,
+        $color-secondary
+      );
+      width: 25%;
       height: 10px;
       z-index: -1;
     }

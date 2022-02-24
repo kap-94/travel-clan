@@ -2000,8 +2000,8 @@ body {
   position: absolute;
   bottom: 21px;
   left: 0;
-  background-image: to right, #d53568, #ffcc00;
-  width: 20%;
+  background-image: linear-gradient(to right, #d53568, #ffcc00);
+  width: 25%;
   height: 10px;
   z-index: -1;
 }
