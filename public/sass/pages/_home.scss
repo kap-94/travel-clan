@@ -36,6 +36,7 @@
   grid-column: full-start / full-end;
   padding: 5rem 0 12.5rem;
   position: relative;
+  overflow: hidden;
 
   &__watermark {
     position: absolute;

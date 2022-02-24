@@ -1998,6 +1998,7 @@ body {
   grid-column: full-start/full-end;
   padding: 5rem 0 12.5rem;
   position: relative;
+  overflow: hidden;
 }
 .section-categories__watermark {
   position: absolute;
