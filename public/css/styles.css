@@ -385,8 +385,9 @@ body {
   }
 }
 .footer__logo {
-  text-decoration: none;
+  color: white;
   cursor: pointer;
+  text-decoration: none;
 }
 .footer__icons {
   font-size: 2rem;
