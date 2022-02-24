@@ -19,10 +19,12 @@ const loadImage = function (entries, observer) {
   observer.unobserve(entry.target);
 };
 
-const observer = new IntersectionObserver(loadImage, {
+const imageObserver = new IntersectionObserver(loadImage, {
   root: null,
   threshold: 0,
 });
+
+imageTargets.forEach((image) => imageObserver.observe(image));
 
 // FLASH MESSAGES FADE OUT
 window.addEventListener("load", () => {
