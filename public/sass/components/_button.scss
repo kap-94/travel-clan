@@ -16,20 +16,20 @@
   }
 
   &--primary {
-    background-color: var(--color-black);
-    color: var(--color-white);
+    background-color: $color-black;
+    color: $color-white;
   }
 
   &--secondary {
-    // background-color: var(--color-white);
+    // background-color: $color-white;
     background-color: transparent;
-    border: 2px solid var(--color-black);
-    color: var(--color-black);
+    border: 2px solid $color-black;
+    color: $color-black;
     font-weight: 600;
   }
 
   &--danger {
-    background-color: var(--color-danger);
+    background-color: $color-danger;
   }
 
   &:hover {

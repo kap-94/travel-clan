@@ -2,7 +2,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  color: var(--color-black);
+  color: $color-black;
   cursor: pointer;
   font-weight: 500;
   font-size: 1.65rem;
@@ -13,7 +13,7 @@
 
   &--content {
     z-index: 10;
-    color: var(--color-white);
+    color: $color-white;
 
     transition: color 0.3s;
   }
@@ -28,7 +28,7 @@
   }
 
   &--fill-one {
-    background-color: var(--color-black);
+    background-color: $color-black;
     width: 100%;
   }
 
@@ -44,7 +44,7 @@
       width: 100%;
     }
     .fill-button--content {
-      color: var(--color-black);
+      color: $color-black;
     }
   }
 }

@@ -1,7 +1,7 @@
 .fixed-navigation {
   opacity: 0;
   visibility: hidden;
-  background-color: var(--color-black);
+  background-color: $color-black;
   position: fixed;
   top: 0;
   right: 0;
@@ -39,11 +39,11 @@
         120deg,
         transparent 0%,
         transparent 50%,
-        var(--color-white) 50%
+        $color-white 50%
       );
       background-size: 250%;
       display: inline-block;
-      color: var(--color-white);
+      color: $color-white;
       font-size: 3rem;
       text-decoration: none;
       text-transform: uppercase;
@@ -55,7 +55,7 @@
     &:hover,
     &:active {
       background-position: 100%;
-      color: var(--color-black);
+      color: $color-black;
       transform: translateX(1rem);
     }
   }

@@ -1,0 +1,22 @@
+[24-Feb-2022 00:52:32 UTC] Uncaught exception: 'ErrorException' with message 'Undefined array key "host"'
+Stack trace: #0 /Users/pablokaram/dev/portfolio/travel-clan/Core/Model.php(33): Core\Error::errorHandler(2, 'Undefined array...', '/Users/pablokar...', 33)
+#1 /Users/pablokaram/dev/portfolio/travel-clan/App/Models/Article.php(579): Core\Model::getDB()
+#2 /Users/pablokaram/dev/portfolio/travel-clan/App/Controllers/Home.php(24): App\Models\Article::getTotal()
+#3 [internal function]: App\Controllers\Home->indexAction()
+#4 /Users/pablokaram/dev/portfolio/travel-clan/Core/Controller.php(51): call_user_func_array(Array, Array)
+#5 /Users/pablokaram/dev/portfolio/travel-clan/Core/Router.php(121): Core\Controller->__call('index', Array)
+#6 /Users/pablokaram/dev/portfolio/travel-clan/public/index.php(49): Core\Router->dispatch('')
+#7 {main}
+Thrown in '/Users/pablokaram/dev/portfolio/travel-clan/Core/Model.php' on line 33
+[24-Feb-2022 00:52:32 UTC] PHP Fatal error:  Uncaught ErrorException: Undefined array key "host" in /Users/pablokaram/dev/portfolio/travel-clan/Core/Model.php:33
+Stack trace:
+#0 /Users/pablokaram/dev/portfolio/travel-clan/Core/Model.php(33): Core\Error::errorHandler(2, 'Undefined array...', '/Users/pablokar...', 33)
+#1 /Users/pablokaram/dev/portfolio/travel-clan/App/Models/RememberedLogins.php(30): Core\Model::getDB()
+#2 /Users/pablokaram/dev/portfolio/travel-clan/App/Auth.php(112): App\Models\RememberedLogins::findByToken(Object(App\Token))
+#3 /Users/pablokaram/dev/portfolio/travel-clan/App/Auth.php(97): App\Auth::loginFromRememberCookie()
+#4 /Users/pablokaram/dev/portfolio/travel-clan/Core/View.php(56): App\Auth::getUser()
+#5 /Users/pablokaram/dev/portfolio/travel-clan/Core/View.php(40): Core\View::getTemplate('500.html', Array)
+#6 /Users/pablokaram/dev/portfolio/travel-clan/Core/Error.php(63): Core\View::renderTemplate('500.html')
+#7 [internal function]: Core\Error::exceptionHandler(Object(ErrorException))
+#8 {main}
+  thrown in /Users/pablokaram/dev/portfolio/travel-clan/Core/Model.php on line 33

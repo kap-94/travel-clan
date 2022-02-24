@@ -1,6 +1,6 @@
 .button-text {
-  border-bottom: 2px solid var(--color-black);
-  color: var(--color-black);
+  border-bottom: 2px solid $color-black;
+  color: $color-black;
   font-size: 1.65rem;
   font-weight: 500;
   padding: 1rem 1.5rem;
@@ -10,8 +10,8 @@
   width: 15rem;
 
   &:hover {
-    background-color: var(--color-black);
-    color: var(--color-white);
+    background-color: $color-black;
+    color: $color-white;
   }
 
   &--large {

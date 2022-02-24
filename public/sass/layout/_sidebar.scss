@@ -2,7 +2,7 @@
   z-index: 1000;
 
   &__scrim {
-    background-color: var(--color-black);
+    background-color: $color-black;
     position: fixed;
     top: 0;
     bottom: 0;
@@ -24,7 +24,7 @@
     top: 0;
     left: 0;
     bottom: 0;
-    background-color: var(--color-grey-dark);
+    background-color: $color-grey-dark;
     width: 25.5rem;
     transform: translate3d(-100%, 0, 0);
     transition: transform 0.2s;
@@ -38,7 +38,7 @@
   &__header {
     display: flex;
     align-items: center;
-    color: var(--color-white);
+    color: $color-white;
     margin-bottom: 1rem;
     padding: 0 1.35rem;
   }
@@ -48,7 +48,7 @@
   }
 
   &__item {
-    background-color: var(--color-grey-dark);
+    background-color: $color-grey-dark;
     list-style: none;
     transition: filter 0.2s;
 
@@ -68,14 +68,14 @@
 
     i {
       color: white;
-      fill: var(--color-white);
+      fill: $color-white;
       text-align: center;
       width: 2.5rem;
     }
   }
 
   &__text {
-    color: var(--color-white);
+    color: $color-white;
     margin-left: 1.5rem;
     font-size: 1.7rem;
     font-weight: 500;
@@ -96,7 +96,7 @@
   @include respond(tab-port) {
     grid-row: 1 / 2;
     background-color: rgba($color-black, 0.815);
-    border-bottom: 1px solid var(--color-grey-dark);
+    border-bottom: 1px solid $color-grey-dark;
     padding: unset;
   }
 }

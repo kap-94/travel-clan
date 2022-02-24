@@ -25,25 +25,25 @@
     &:focus {
       outline: none;
       width: 100%;
-      // background-color: var(--color-grey-light);
+      // background-color: $color-grey-light;
     }
 
     &::-webkit-input-placeholder {
       font-weight: 100;
-      color: var(--color-grey-light);
+      color: $color-grey-light;
       // color: rgba($color-black, 0.65);
     }
   }
 
   &__input:focus + &__button {
     background-color: rgba($color-black, 0.65);
-    // background-color: var(--color-grey-light);
+    // background-color: $color-grey-light;
   }
 
   &__button {
     border: none;
     background-color: rgba($color-black, 0.65);
-    // background-color: var(--color-grey-light);
+    // background-color: $color-grey-light;
 
     &:focus {
       outline: none;
@@ -57,6 +57,6 @@
   &__icon {
     height: 2rem;
     width: 2rem;
-    fill: var(--color-grey-dark);
+    fill: $color-grey-dark;
   }
 }

@@ -14,7 +14,7 @@
 
   &__brand {
     text-decoration: none;
-    color: var(--color-black);
+    color: $color-black;
   }
 
   &__nav {
@@ -27,7 +27,7 @@
     &:first-child {
       transition: background-color 0.3s;
       &:hover {
-        background-color: var(--color-grey-light);
+        background-color: $color-grey-light;
       }
     }
 
@@ -40,7 +40,7 @@
 
   &__link {
     @include flexCenter;
-    color: var(--color-black);
+    color: $color-black;
     cursor: pointer;
     font-weight: 500;
     font-size: 1.65rem;
@@ -52,7 +52,7 @@
   }
 
   &__button {
-    background-color: var(--color-white);
+    background-color: $color-white;
     z-index: 1000;
   }
 
@@ -72,7 +72,7 @@
     &,
     &::before,
     &::after {
-      background-color: var(--color-grey-dark);
+      background-color: $color-grey-dark;
       display: inline-block;
       height: 2px;
     }

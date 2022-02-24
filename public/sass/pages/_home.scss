@@ -13,7 +13,7 @@
 .section-hero {
   grid-column: full-start / full-end;
   padding: 7.5rem 0 17.5rem;
-  background-color: var(--color-black);
+  background-color: $color-black;
 }
 
 .section-categories {
@@ -27,7 +27,7 @@
 
 .section-slider {
   grid-column: full-start / full-end;
-  background-color: var(--color-white-dark);
+  background-color: $color-white-dark;
   padding: 15rem 0;
 }
 
@@ -37,7 +37,7 @@
 
 .section-programs {
   grid-column: full-start / full-end;
-  background-color: var(--color-white-dark);
+  background-color: $color-white-dark;
 }
 
 .section-video {

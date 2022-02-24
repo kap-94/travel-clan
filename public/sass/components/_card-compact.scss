@@ -19,12 +19,12 @@
   }
 
   &__body {
-    color: var(--color-black);
+    color: $color-black;
     height: 25%;
   }
 
   &__title {
-    color: var(--color-grey-dark);
+    color: $color-grey-dark;
     font-size: 1.45rem;
     font-weight: 700;
     margin-top: 1.6rem;

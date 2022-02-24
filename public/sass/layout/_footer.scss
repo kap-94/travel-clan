@@ -3,8 +3,8 @@
   grid-template-columns: 1fr 35%;
   grid-row-gap: 5rem;
   align-items: center;
-  background-color: var(--color-black);
-  color: var(--color-grey-light);
+  background-color: $color-black;
+  color: $color-grey-light;
   padding: 10rem 10vw;
 
   @include respond(tab-land) {
@@ -14,6 +14,11 @@
   @include respond(phone) {
     grid-template-columns: 1fr;
     justify-items: center;
+  }
+
+  &__logo {
+    text-decoration: none;
+    cursor: pointer;
   }
 
   &__icons {
@@ -32,7 +37,7 @@
 
   &__copyright,
   &__text {
-    color: var(--color-grey-dark);
+    color: $color-grey-dark;
   }
 
   &__text {

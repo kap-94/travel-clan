@@ -1,5 +1,5 @@
 .paginator {
-  color: var(--color-white);
+  color: $color-white;
   font-weight: 500;
 
   &__nav {
@@ -16,7 +16,7 @@
       text-decoration: none;
 
       &:visited {
-        color: var(--color-primary);
+        color: $color-tertiary;
       }
     }
   }

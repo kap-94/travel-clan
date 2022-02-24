@@ -163,10 +163,10 @@
 }
 // TEXT COLOR
 .text-white {
-  color: var(--color-white) !important;
+  color: $color-white !important;
 }
 .text-black {
-  color: var(--color-black) !important;
+  color: $color-black !important;
 }
 // TEXT TRANSFORM
 .text-uppercase {
@@ -230,5 +230,5 @@
 
 // BACKGROUND
 .bg-grey-light {
-  background-color: var(--color-grey-light) !important;
+  background-color: $color-grey-light !important;
 }

@@ -2,7 +2,7 @@
   position: absolute;
   right: 0;
   top: 0;
-  background-color: var(--color-grey-light);
+  background-color: $color-grey-light;
   border-radius: 5px;
   box-shadow: 0 0 5px 1px rgba($color-black, 0.975);
   margin-top: 5rem;
@@ -32,7 +32,7 @@
   }
 
   &__square {
-    background-color: var(--color-grey-light);
+    background-color: $color-grey-light;
     position: absolute;
     top: -4.5px;
     right: 8.5px;
@@ -44,7 +44,7 @@
 
   &__item {
     cursor: pointer;
-    background-color: var(--color-grey-light);
+    background-color: $color-grey-light;
     border-radius: 3px;
     font-size: 1.65rem;
     font-weight: 400;
@@ -60,7 +60,7 @@
 
   &__link {
     display: block;
-    color: var(--color-black);
+    color: $color-black;
     text-decoration: none;
   }
 }
