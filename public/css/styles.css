@@ -354,6 +354,10 @@ body {
   box-sizing: border-box;
 }
 
+.lazy-image {
+  filter: blur(20px);
+}
+
 .admin-layout {
   display: grid;
   grid-template-rows: repeat(4, min-content);

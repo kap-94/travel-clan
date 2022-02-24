@@ -71,13 +71,13 @@
         <div class="card-compact__header">
           <a href="category/{{category.name}}">
             <img
-              srcset="
-                ./assets/images/categories/{{category['name']}}-600w.jpg  1x,
-                ./assets/images/categories/{{category['name']}}-1200w.jpg 2x
-              "
+              data-srcset="
+            ./assets/images/categories/{{category['name']}}-600w.jpg  1x,
+            ./assets/images/categories/{{category['name']}}-1200w.jpg 2x
+            "
+              src="./assets/images/categories/{{category['name']}}-300w.jpg"
               alt="Article Category"
-              class="card-compact__image"
-              src="./assets/images/categories/{{category['name']}}-1200w.jpg"
+              class="card-compact__image lazy-image"
             />
           </a>
         </div>
