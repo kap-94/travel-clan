@@ -1999,6 +1999,7 @@ body {
   font-size: 45rem;
   line-height: 1;
   width: 50%;
+  z-index: -1;
 }
 @media only screen and (min-width: 112.5em) {
   .section-categories {
