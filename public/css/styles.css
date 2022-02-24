@@ -1915,7 +1915,7 @@ body {
 
 .page-admin {
   grid-column: full-start/full-end;
-  background-color: #f4f0f4;
+  background-color: rgba(0, 0, 0, 0.9);
   min-height: 100vh;
 }
 @media only screen and (max-width: 56.25em) {
