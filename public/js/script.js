@@ -13,7 +13,7 @@ const loadImage = function (entries, observer) {
   // Replace src with data-src
   entry.target.src = entry.target.dataset.src;
   entry.target.addEventListener("load", () => {
-    entry.target.classList.remove("lazy-img");
+    entry.target.classList.remove("lazy-image");
   });
 
   observer.unobserve(entry.target);
