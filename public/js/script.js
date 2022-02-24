@@ -3,7 +3,7 @@
 const flashMessage = document.querySelector(".flash-message");
 
 // LAZY LOADING IMAGES
-const imageTargets = document.querySelectorAll("img[data-srcset]");
+const imageTargets = document.querySelectorAll("img[data-src]");
 
 const loadImage = function (entries, observer) {
   const [entry] = entries;
