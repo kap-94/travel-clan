@@ -1396,6 +1396,7 @@ body {
 }
 .form--profile-edit {
   padding: 2.5rem;
+  width: 37.5rem;
 }
 .form__generals {
   display: flex;
@@ -1685,8 +1686,8 @@ body {
 
 .profile {
   background-color: #eeeeee;
-  width: 30rem;
-  padding: 5rem;
+  padding: 2.5rem;
+  width: 37.5rem;
 }
 .profile__info {
   margin: 3rem 0;
