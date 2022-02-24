@@ -961,11 +961,11 @@ body {
   grid-column: 1/-1;
   background-color: #ffcc00;
   border: none;
-  color: black;
   font-weight: 600;
   transition: filter 0.2s;
 }
 .card-admin__button a {
+  color: black;
   font-size: 1.55rem;
   font-weight: 500;
   text-decoration: none;
@@ -1681,7 +1681,7 @@ body {
 .profile {
   background-color: #eeeeee;
   width: 30rem;
-  padding: 3.5rem;
+  padding: 2.5rem;
 }
 .profile__info {
   margin: 3rem 0;

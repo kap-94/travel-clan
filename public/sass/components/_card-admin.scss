@@ -86,11 +86,11 @@
     grid-column: 1 / -1;
     background-color: $color-secondary;
     border: none;
-    color: $color-black;
     font-weight: 600;
     transition: filter 0.2s;
 
     a {
+      color: $color-black;
       font-size: 1.55rem;
       font-weight: 500;
       text-decoration: none;
