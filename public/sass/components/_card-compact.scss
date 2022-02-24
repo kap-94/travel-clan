@@ -36,7 +36,7 @@
     position: relative;
 
     &::before {
-      border-left: 4px solid #008577;
+      border-left: 4px solid $color-primary;
       content: "";
       display: inline-block;
       position: absolute;

@@ -1092,7 +1092,7 @@ body {
   position: relative;
 }
 .card-compact__title::before {
-  border-left: 4px solid #008577;
+  border-left: 4px solid #d53568;
   content: "";
   display: inline-block;
   position: absolute;
