@@ -603,11 +603,11 @@ body {
   background-color: #555555;
   width: 25.5rem;
   transform: translate3d(-100%, 0, 0);
-  transition: transform 0.2s;
+  transition: transform 0.2s ease;
 }
 .sidebar__content[opened] {
   transform: translate3d(0, 0, 0);
-  transition: transform 0.2s;
+  transition: transform 0.2s ease;
 }
 .sidebar__header {
   display: flex;
