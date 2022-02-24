@@ -293,16 +293,6 @@ ORDER: Base + typography > general layout + grid > page layout > components
   display: inline-block;
   font-size: 5.5rem;
   text-transform: uppercase;
-  position: relative;
-}
-.heading-primary::after {
-  content: "";
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  background-color: #d53568;
-  width: 20%;
-  height: 5px;
 }
 
 .heading-secondary {
@@ -1667,13 +1657,6 @@ body {
   width: 100%;
 }
 
-.section-hero {
-  display: grid;
-  grid-column: full-start/full-end;
-  justify-items: center;
-  align-items: center;
-}
-
 .paginator {
   color: white;
   font-weight: 500;
@@ -1995,6 +1978,18 @@ body {
   grid-column: full-start/full-end;
   padding: 7.5rem 0 17.5rem;
   background-color: black;
+}
+.section-hero__title {
+  position: relative;
+}
+.section-hero__title::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  background-color: #d53568;
+  width: 20%;
+  height: 5px;
 }
 
 .section-categories {

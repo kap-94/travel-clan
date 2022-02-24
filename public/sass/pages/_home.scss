@@ -14,6 +14,20 @@
   grid-column: full-start / full-end;
   padding: 7.5rem 0 17.5rem;
   background-color: $color-black;
+
+  &__title {
+    position: relative;
+
+    &::after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      background-color: $color-primary;
+      width: 20%;
+      height: 5px;
+    }
+  }
 }
 
 .section-categories {
