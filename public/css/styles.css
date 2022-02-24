@@ -937,7 +937,7 @@ body {
   grid-column: 1/-1;
   justify-self: center;
   align-self: end;
-  background-color: #ffcc00;
+  background-color: black;
   color: white;
   font-size: 1.6rem;
   font-weight: 500;
@@ -959,9 +959,10 @@ body {
 }
 .card-admin__button {
   grid-column: 1/-1;
-  background-color: black;
+  background-color: #ffcc00;
   border: none;
-  color: white;
+  color: black;
+  font-weight: 600;
   transition: filter 0.2s;
 }
 .card-admin__button a {
