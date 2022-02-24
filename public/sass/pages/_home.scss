@@ -24,7 +24,8 @@
       position: absolute;
       bottom: 21px;
       left: 0;
-      background-color: $color-secondary;
+      // background-color: $color-secondary;
+      background-image: (to right, $color-primary, $color-secondary);
       width: 20%;
       height: 10px;
       z-index: -1;
