@@ -1,8 +1,19 @@
 .heading-primary {
   color: $color-white;
+  display: inline-block;
   font-size: 5.5rem;
-  // font-weight: 500;
   text-transform: uppercase;
+  position: relative;
+
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background-color: $color-primary;
+    width: 20%;
+    height: 5px;
+  }
 }
 
 .heading-secondary {
