@@ -1916,6 +1916,7 @@ body {
 .page-admin {
   grid-column: full-start/full-end;
   background-color: rgba(0, 0, 0, 0.9);
+  min-height: 100vh;
 }
 @media only screen and (max-width: 56.25em) {
   .page-admin {
@@ -1936,7 +1937,7 @@ body {
 .page-admin--centered {
   display: grid;
   place-content: center;
-  height: 100vh;
+  padding: 2.5vw 0;
 }
 
 .page-articles {

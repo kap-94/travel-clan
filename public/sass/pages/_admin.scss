@@ -1,6 +1,7 @@
 .page-admin {
   grid-column: full-start / full-end;
   background-color: rgba($color-black, 0.9);
+  min-height: 100vh;
 
   @include respond(tab-port) {
     grid-column: sidebar-start / full-end;
@@ -21,6 +22,6 @@
   &--centered {
     display: grid;
     place-content: center;
-    height: 100vh;
+    padding: 2.5vw 0;
   }
 }
