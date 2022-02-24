@@ -1915,7 +1915,7 @@ body {
 
 .page-admin {
   grid-column: full-start/full-end;
-  background-color: rgba(0, 0, 0, 0.9);
+  background-color: #f4f0f4;
   min-height: 100vh;
 }
 @media only screen and (max-width: 56.25em) {
@@ -2025,7 +2025,7 @@ body {
 
 .section-slider {
   grid-column: full-start/full-end;
-  background-color: #f2f2f2;
+  background-color: #f4f0f4;
   padding: 15rem 0;
 }
 
@@ -2035,7 +2035,7 @@ body {
 
 .section-programs {
   grid-column: full-start/full-end;
-  background-color: #f2f2f2;
+  background-color: #f4f0f4;
 }
 
 .section-video {
