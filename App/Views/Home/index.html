@@ -70,18 +70,14 @@
       <div class="card-compact">
         <div class="card-compact__header">
           <a href="category/{{category.name}}">
-            <!-- data-srcset="
-          ./assets/images/categories/{{category['name']}}-600w.jpg  1x,
-          ./assets/images/categories/{{category['name']}}-1200w.jpg 2x
-          " -->
             <img
-              data-src="
-            ./assets/images/categories/{{category['name']}}-600w.jpg  1x,
-            ./assets/images/categories/{{category['name']}}-1200w.jpg 2x
-            "
-              src="./assets/images/categories/{{category['name']}}-300w.jpg"
+              srcset="
+                ./assets/images/categories/{{category['name']}}-600w.jpg  1x,
+                ./assets/images/categories/{{category['name']}}-1200w.jpg 2x
+              "
               alt="Article Category"
-              class="card-compact__image lazy-image"
+              class="card-compact__image"
+              src="./assets/images/categories/{{category['name']}}-1200w.jpg"
             />
           </a>
         </div>
