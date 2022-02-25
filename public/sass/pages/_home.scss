@@ -14,22 +14,6 @@
   grid-column: full-start / full-end;
   padding: 7.5rem 0 17.5rem;
   background-color: $color-black;
-
-  &__title {
-    position: relative;
-    z-index: 1;
-
-    &::after {
-      content: "";
-      position: absolute;
-      bottom: 21px;
-      left: 0;
-      background-color: $color-primary;
-      width: 25%;
-      height: 15px;
-      z-index: -1;
-    }
-  }
 }
 
 .section-categories {

@@ -294,6 +294,20 @@ ORDER: Base + typography > general layout + grid > page layout > components
   font-size: 5.5rem;
   text-transform: uppercase;
 }
+.heading-primary--decorated {
+  position: relative;
+  z-index: 1;
+}
+.heading-primary--decorated::after {
+  content: "";
+  position: absolute;
+  bottom: 21px;
+  left: 0;
+  width: 25%;
+  height: 15px;
+  z-index: -1;
+  background-image: linear-gradient(to right, #d53568 0 35%, #ffcc00);
+}
 
 .heading-secondary {
   font-size: 4.2rem;
@@ -1323,11 +1337,11 @@ body {
 .new-articles__title::after {
   content: "";
   position: absolute;
-  bottom: -3px;
+  bottom: 0px;
   left: 0;
   background-image: linear-gradient(to right, #d53568 0 35%, #ffcc00);
   width: 100%;
-  height: 6px;
+  height: 3px;
 }
 @media only screen and (max-width: 75em) {
   .new-articles__title {
@@ -2001,20 +2015,6 @@ body {
   grid-column: full-start/full-end;
   padding: 7.5rem 0 17.5rem;
   background-color: black;
-}
-.section-hero__title {
-  position: relative;
-  z-index: 1;
-}
-.section-hero__title::after {
-  content: "";
-  position: absolute;
-  bottom: 21px;
-  left: 0;
-  background-color: #d53568;
-  width: 25%;
-  height: 15px;
-  z-index: -1;
 }
 
 .section-categories {
