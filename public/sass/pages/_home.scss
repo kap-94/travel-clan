@@ -24,14 +24,9 @@
       position: absolute;
       bottom: 21px;
       left: 0;
-      // background-color: $color-secondary;
-      background-image: linear-gradient(
-        to right,
-        $color-primary,
-        $color-secondary
-      );
+      background-color: $color-primary;
       width: 25%;
-      height: 10px;
+      height: 15px;
       z-index: -1;
     }
   }

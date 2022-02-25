@@ -1316,18 +1316,18 @@ body {
   }
 }
 .new-articles__title {
-  height: 10%;
+  display: inline-block;
+  margin-bottom: 3.5rem;
   position: relative;
 }
 .new-articles__title::after {
   content: "";
   position: absolute;
-  bottom: 8px;
+  bottom: -3px;
   left: 0;
-  background-image: linear-gradient(to right, #d53568, #ffcc00);
-  width: 1000%;
-  height: 10px;
-  z-index: -1;
+  background-image: linear-gradient(to right, #d53568 0 35%, #ffcc00);
+  width: 100%;
+  height: 6px;
 }
 @media only screen and (max-width: 75em) {
   .new-articles__title {
@@ -2011,9 +2011,9 @@ body {
   position: absolute;
   bottom: 21px;
   left: 0;
-  background-image: linear-gradient(to right, #d53568, #ffcc00);
+  background-color: #d53568;
   width: 25%;
-  height: 10px;
+  height: 15px;
   z-index: -1;
 }
 
