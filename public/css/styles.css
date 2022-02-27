@@ -1365,7 +1365,6 @@ body {
 }
 .new-articles__list::-webkit-scrollbar-track {
   background: black;
-  margin-block: 7.5rem;
 }
 .new-articles__list::-webkit-scrollbar-thumb {
   background: #555555;
