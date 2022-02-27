@@ -114,11 +114,6 @@
   @include respond(tab-land) {
     grid-column: 1 / -1;
     grid-row: 4 / 5;
-    max-height: 105rem;
-  }
-
-  @include respond(tab-port) {
-    max-height: 70rem;
   }
 
   @include respond(phone) {

@@ -23,13 +23,13 @@
   }
 
   &__text-box {
+    z-index: 1;
     @include respond(tab-port) {
-      margin: 0 2vw;
+      margin: 4rem 2vw;
     }
   }
 
   &__text {
-    color: #333;
     font-size: 1.75rem;
     width: 85%;
 

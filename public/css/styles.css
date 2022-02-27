@@ -822,8 +822,6 @@ body {
 }
 
 .button-text {
-  border-bottom: 2px solid black;
-  color: black;
   font-size: 1.65rem;
   font-weight: 500;
   padding: 1rem 1.5rem;
@@ -832,7 +830,19 @@ body {
   transition: all 0.2s ease-in;
   width: 15rem;
 }
-.button-text:hover {
+.button-text--white {
+  border-bottom: 2px solid white;
+  color: white;
+}
+.button-text--white:hover {
+  background-color: white;
+  color: black;
+}
+.button-text--black {
+  border-bottom: 2px solid black;
+  color: black;
+}
+.button-text--black:hover {
   background-color: black;
   color: white;
 }
@@ -1334,12 +1344,6 @@ body {
   .new-articles {
     grid-column: 1/-1;
     grid-row: 4/5;
-    max-height: 105rem;
-  }
-}
-@media only screen and (max-width: 56.25em) {
-  .new-articles {
-    max-height: 70rem;
   }
 }
 @media only screen and (max-width: 37.5em) {
@@ -1540,7 +1544,7 @@ body {
   place-content: center;
   grid-gap: 3rem;
   background-color: #eeeeee;
-  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.1)), url("./../../assets/images/boreal-2400w.jpg");
+  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.1)), url("./../../assets/images/white-mountains.jpg");
   background-size: cover;
   background-position: center;
   line-height: 1.25;
@@ -1550,7 +1554,7 @@ body {
 }
 @media only screen and (min-resolution: 192dpi) and (min-width: 36em), only screen and (-webkit-min-device-pixel-ratio: 2) and (min-width: 36em), only screen and (min-width: 125em) {
   .frame-background-full {
-    background-image: url("./../../assets/images/boreal-2400w.jpg");
+    background-image: url("./../../assets/images/white-mountains.jpg");
   }
 }
 @media only screen and (max-width: 56.25em) {
@@ -1883,9 +1887,20 @@ body {
   left: 6%;
   transform: translate(-50%, -50%);
 }
+@media only screen and (max-width: 56.25em) {
+  .slider__button--left {
+    left: 4%;
+  }
+}
 .slider__button--right {
   right: 6%;
   transform: translate(50%, -50%);
+}
+@media only screen and (max-width: 56.25em) {
+  .slider__button--right {
+    right: unset;
+    left: 6%;
+  }
 }
 
 .slide {
@@ -1932,13 +1947,15 @@ body {
     font-size: 3.6rem;
   }
 }
+.slider-component__text-box {
+  z-index: 1;
+}
 @media only screen and (max-width: 56.25em) {
   .slider-component__text-box {
-    margin: 0 2vw;
+    margin: 4rem 2vw;
   }
 }
 .slider-component__text {
-  color: #333;
   font-size: 1.75rem;
   width: 85%;
 }
@@ -2064,7 +2081,7 @@ body {
 .section-slider {
   grid-column: full-start/full-end;
   background-color: #444;
-  padding: 15rem 0;
+  padding: 0;
 }
 
 .section-info {
