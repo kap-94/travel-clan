@@ -1111,7 +1111,7 @@ body {
   position: relative;
 }
 .card-compact__title::before {
-  border-left: 4px solid #ffcc00;
+  border-left: 4px solid #d53568;
   content: "";
   display: inline-block;
   position: absolute;
@@ -1128,22 +1128,22 @@ body {
 .card-horizontal {
   display: flex;
   align-items: center;
-  background-image: linear-gradient(147deg, #000000 58.25%, #2c3e50 95%);
-  color: white;
+  background-color: white;
+  color: black;
   cursor: pointer;
   height: 12rem;
   text-decoration: none;
   overflow: hidden;
 }
 .card-horizontal__body {
-  width: 65%;
+  width: 55%;
 }
 .card-horizontal__title {
   margin-bottom: 0.5rem;
 }
 .card-horizontal__image-box {
   margin-left: 2rem;
-  width: 35%;
+  width: 45%;
   height: 100%;
 }
 .card-horizontal__image {
@@ -1333,6 +1333,12 @@ body {
   .new-articles {
     grid-column: 1/-1;
     grid-row: 4/5;
+    max-height: 105rem;
+  }
+}
+@media only screen and (max-width: 56.25em) {
+  .new-articles {
+    max-height: 70rem;
   }
 }
 @media only screen and (max-width: 37.5em) {
