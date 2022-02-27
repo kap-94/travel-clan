@@ -1131,7 +1131,7 @@ body {
   background-image: linear-gradient(147deg, #000000 58.25%, #2c3e50 95%);
   color: white;
   cursor: pointer;
-  height: 10rem;
+  height: 12rem;
   text-decoration: none;
   overflow: hidden;
 }
@@ -1309,6 +1309,19 @@ body {
 .new-articles {
   grid-column: 3/4;
   grid-row: 1/-1;
+  max-height: 70rem;
+  overflow: scroll;
+}
+.new-articles::-webkit-scrollbar {
+  width: 1.5rem;
+  /* height: 5rem; */
+}
+.new-articles::-webkit-scrollbar-track {
+  background: black;
+  margin-block: 7.5rem;
+}
+.new-articles::-webkit-scrollbar-thumb {
+  background: white;
 }
 @media only screen and (min-width: 112.5em) {
   .new-articles {
@@ -1354,12 +1367,11 @@ body {
   }
 }
 .new-articles__list {
-  height: 90%;
   display: flex;
   flex-direction: column;
 }
 .new-articles__list a:not(:last-child) {
-  margin-bottom: 2.5rem;
+  margin-bottom: 1.65rem;
 }
 @media only screen and (max-width: 75em) {
   .new-articles__list {

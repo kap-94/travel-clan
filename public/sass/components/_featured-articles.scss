@@ -78,6 +78,33 @@
 .new-articles {
   grid-column: 3 / 4;
   grid-row: 1 / -1;
+  max-height: 70rem;
+  overflow: scroll;
+
+  &::-webkit-scrollbar {
+    width: 1.5rem;
+    /* height: 5rem; */
+  }
+  &::-webkit-scrollbar-track {
+    background: $color-black;
+    margin-block: 7.5rem;
+  }
+  &::-webkit-scrollbar-thumb {
+    background: $color-white;
+    // border: 0.25em solid ;
+  }
+  // &::-webkit-scrollbar-thumb:hover {
+  //   background: ${({ theme }) => theme.colors.primary};
+  //   opacity: 0.5;
+  // }
+
+  // @supports (scrollbar-color: red blue) {
+  //   * {
+  //     scrollbar-color: ${({ theme }) => theme.colors.white},
+  //       ${({ theme }) => theme.colors.secondary};
+  //     scrollbar-width: thin;
+  //   }
+  // }
 
   @include respond(big-desktop) {
     grid-column: 3 / 4;
@@ -124,12 +151,11 @@
   }
 
   &__list {
-    height: 90%;
     display: flex;
     flex-direction: column;
 
     a:not(:last-child) {
-      margin-bottom: 2.5rem;
+      margin-bottom: 1.65rem;
     }
 
     @include respond(tab-land) {
