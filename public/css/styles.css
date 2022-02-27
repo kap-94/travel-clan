@@ -422,7 +422,7 @@ body {
   margin: 0 1rem;
 }
 .footer__copyright, .footer__text {
-  color: #555555;
+  color: #444;
 }
 .footer__text {
   text-align: right;
@@ -546,7 +546,7 @@ body {
   width: 2.35rem;
 }
 .navbar__icon, .navbar__icon::before, .navbar__icon::after {
-  background-color: #555555;
+  background-color: #444;
   display: inline-block;
   height: 2px;
 }
@@ -584,7 +584,7 @@ body {
   justify-content: space-between;
   align-items: center;
   background-color: rgba(0, 0, 0, 0.815);
-  border-bottom: 1px solid #555555;
+  border-bottom: 1px solid #444;
   padding: 0 2.5vw;
   height: 7rem;
 }
@@ -618,7 +618,7 @@ body {
   top: 0;
   left: 0;
   bottom: 0;
-  background-color: #555555;
+  background-color: #444;
   width: 25.5rem;
   transform: translate3d(-100%, 0, 0);
   transition: transform 0.2s ease;
@@ -638,7 +638,7 @@ body {
   margin: 0 auto;
 }
 .sidebar__item {
-  background-color: #555555;
+  background-color: #444;
   list-style: none;
   transition: filter 0.2s;
 }
@@ -680,7 +680,7 @@ body {
   .sidebar-close {
     grid-row: 1/2;
     background-color: rgba(0, 0, 0, 0.815);
-    border-bottom: 1px solid #555555;
+    border-bottom: 1px solid #444;
     padding: unset;
   }
 }
@@ -1099,7 +1099,7 @@ body {
   height: 25%;
 }
 .card-compact__title {
-  color: #555555;
+  color: #444;
   font-size: 1.45rem;
   font-weight: 700;
   margin-top: 1.6rem;
@@ -1321,7 +1321,7 @@ body {
   background: black;
 }
 .new-articles::-webkit-scrollbar-thumb {
-  background: #555555;
+  background: #444;
   border: 0.25em solid black;
 }
 @media only screen and (min-width: 112.5em) {
@@ -1501,7 +1501,7 @@ body {
   border-bottom: 3px solid #f25244;
 }
 .form__input::-webkit-input-placeholder {
-  color: #555555;
+  color: #444;
 }
 .form__label {
   font-size: 1.65rem;
@@ -1540,7 +1540,7 @@ body {
   place-content: center;
   grid-gap: 3rem;
   background-color: #eeeeee;
-  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.1)), url("./../../assets/images/desert-1200w.jpg");
+  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.1)), url("./../../assets/images/boreal-2400w.jpg");
   background-size: cover;
   background-position: center;
   line-height: 1.25;
@@ -1550,7 +1550,7 @@ body {
 }
 @media only screen and (min-resolution: 192dpi) and (min-width: 36em), only screen and (-webkit-min-device-pixel-ratio: 2) and (min-width: 36em), only screen and (min-width: 125em) {
   .frame-background-full {
-    background-image: url("./../../assets/images/desert-2400w.jpg");
+    background-image: url("./../../assets/images/boreal-2400w.jpg");
   }
 }
 @media only screen and (max-width: 56.25em) {
@@ -1852,7 +1852,7 @@ body {
 .search__icon {
   height: 2rem;
   width: 2rem;
-  fill: #555555;
+  fill: #444;
 }
 
 /* SLIDER */
@@ -1864,6 +1864,28 @@ body {
   position: relative;
   /* IN THE END */
   overflow: hidden;
+}
+.slider__button {
+  position: absolute;
+  top: 90%;
+  z-index: 10;
+  border: none;
+  background: rgba(255, 255, 255, 0.65);
+  font-family: inherit;
+  color: #333;
+  border-radius: 50%;
+  height: 5rem;
+  width: 5rem;
+  font-size: 3.25rem;
+  cursor: pointer;
+}
+.slider__button--left {
+  left: 6%;
+  transform: translate(-50%, -50%);
+}
+.slider__button--right {
+  right: 6%;
+  transform: translate(50%, -50%);
 }
 
 .slide {
@@ -1885,38 +1907,13 @@ body {
   object-fit: cover;
 }
 
-.slider__button {
-  position: absolute;
-  top: 50%;
-  z-index: 10;
-  border: none;
-  background: rgba(255, 255, 255, 0.65);
-  font-family: inherit;
-  color: #333;
-  border-radius: 50%;
-  height: 5rem;
-  width: 5rem;
-  font-size: 3.25rem;
-  cursor: pointer;
-}
-
-.slider__button--left {
-  left: 6%;
-  transform: translate(-50%, -50%);
-}
-
-.slider__button--right {
-  right: 6%;
-  transform: translate(50%, -50%);
-}
-
 .slider-component {
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-gap: 3.5rem;
   align-items: center;
-  padding: 0 2.5vw;
-  color: #333;
+  overflow: hidden;
+  color: white;
 }
 @media only screen and (max-width: 56.25em) {
   .slider-component {
@@ -1924,7 +1921,8 @@ body {
   }
 }
 .slider-component__slider {
-  width: 100%;
+  height: 37vw;
+  width: 125%;
 }
 .slider-component__title {
   margin-bottom: 1rem;
@@ -2065,7 +2063,7 @@ body {
 
 .section-slider {
   grid-column: full-start/full-end;
-  background-color: #f4f0f4;
+  background-color: #444;
   padding: 15rem 0;
 }
 
