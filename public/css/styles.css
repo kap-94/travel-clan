@@ -1321,7 +1321,8 @@ body {
   margin-block: 7.5rem;
 }
 .new-articles::-webkit-scrollbar-thumb {
-  background: white;
+  background: #555555;
+  border: 0.25em solid black;
 }
 @media only screen and (min-width: 112.5em) {
   .new-articles {
