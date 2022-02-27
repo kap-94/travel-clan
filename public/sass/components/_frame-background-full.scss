@@ -8,9 +8,9 @@
       rgba(0, 0, 0, 0.2),
       rgba(0, 0, 0, 0.1)
     ),
-    url("./../../assets/images/white-mountains.jpg");
+    url("./../../assets/images/white-mountains-640w.jpg");
   background-size: cover;
-  background-position: center;
+  background-position: top;
   line-height: 1.25;
   min-height: 30rem;
   padding: 7vw 3.5rem;
@@ -19,7 +19,7 @@
   @media only screen and (min-resolution: 192dpi) and (min-width: 36em),
     only screen and (-webkit-min-device-pixel-ratio: 2) and (min-width: 36em),
     only screen and (min-width: 125em) {
-    background-image: url("./../../assets/images/white-mountains.jpg"); // big image
+    background-image: url("./../../assets/images/white-mountains-2400w.jpg"); // big image
   }
 
   &__title {
