@@ -1133,6 +1133,7 @@ body {
   cursor: pointer;
   height: 12rem;
   text-decoration: none;
+  padding-left: 2rem;
   overflow: hidden;
 }
 .card-horizontal__body {
