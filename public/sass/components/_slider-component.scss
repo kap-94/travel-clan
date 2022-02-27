@@ -13,10 +13,15 @@
   &__slider {
     height: 37vw;
     width: 125%;
+
+    @include respond(tab-port) {
+      height: 45vw;
+    }
   }
 
   &__title {
     margin-bottom: 1rem;
+
     @include respond(tab-land) {
       font-size: 3.6rem;
     }

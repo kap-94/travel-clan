@@ -26,22 +26,13 @@
   }
 
   &__button--left {
-    left: 6%;
     transform: translate(-50%, -50%);
-
-    @include respond(tab-port) {
-      left: 4%;
-    }
+    left: 4%;
   }
 
   &__button--right {
-    right: 6%;
     transform: translate(50%, -50%);
-
-    @include respond(tab-port) {
-      right: unset;
-      left: 6%;
-    }
+    left: 6%;
   }
 }
 
